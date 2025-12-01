@@ -1,0 +1,140 @@
+---
+import '../styles/global.css';
+import siteInfo from '../data/site-info.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = siteInfo.seo.defaultTitle,
+  description = siteInfo.seo.defaultDescription
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Rubik Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
+
+    <!-- Header -->
+    <header class="bg-brown text-white sticky top-0 z-50 shadow-lg">
+      <div class="container">
+        <div class="flex items-center justify-between py-4">
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-3">
+            <img src="/images/logo.png" alt={siteInfo.name} class="h-16 w-auto" />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="hidden md:flex gap-6 items-center">
+            <a href="/" class="hover:text-cream transition-colors">דף הבית</a>
+            <a href="/about" class="hover:text-cream transition-colors">אודות</a>
+            <a href="/products/beef" class="hover:text-cream transition-colors">מוצרים</a>
+            <a href="/contact" class="hover:text-cream transition-colors">צור קשר</a>
+          </nav>
+
+          <!-- Contact CTAs -->
+          <div class="flex gap-3">
+            <a href={`tel:${siteInfo.contact.phone}`} class="btn btn-primary text-sm md:text-base">
+              📞 {siteInfo.contact.phone}
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brown text-cream">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- About -->
+          <div>
+            <h3 class="text-white text-xl font-bold mb-4">{siteInfo.name}</h3>
+            <p class="mb-4">{siteInfo.description}</p>
+            <img src="/images/logo.png" alt={siteInfo.name} class="h-20 w-auto opacity-80" />
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-white text-xl font-bold mb-4">קישורים מהירים</h3>
+            <ul class="space-y-2">
+              <li><a href="/" class="hover:text-white transition-colors">דף הבית</a></li>
+              <li><a href="/about" class="hover:text-white transition-colors">אודות</a></li>
+              <li><a href="/products/beef" class="hover:text-white transition-colors">מוצרים</a></li>
+              <li><a href="/contact" class="hover:text-white transition-colors">צור קשר</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-white text-xl font-bold mb-4">יצירת קשר</h3>
+            <ul class="space-y-2">
+              <li>📍 {siteInfo.address.full}</li>
+              <li>📞 <a href={`tel:${siteInfo.contact.phone}`} class="hover:text-white">{siteInfo.contact.phone}</a></li>
+              <li>💬 <a href={`https://wa.me/${siteInfo.contact.whatsapp}`} class="hover:text-white">WhatsApp: {siteInfo.contact.whatsapp}</a></li>
+            </ul>
+
+            <!-- Social Media -->
+            <div class="flex gap-4 mt-4">
+              <a href={siteInfo.contact.facebook} target="_blank" rel="noopener" class="text-2xl hover:text-white transition-colors" aria-label="Facebook">
+                📘
+              </a>
+              <a href={siteInfo.contact.instagram} target="_blank" rel="noopener" class="text-2xl hover:text-white transition-colors" aria-label="Instagram">
+                📷
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-cream/20 mt-8 pt-8 text-center text-sm">
+          <p>© 2025 {siteInfo.name} - קצביית בוטיק. כל הזכויות שמורות.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .bg-brown {
+    background-color: var(--color-brown);
+  }
+
+  .text-cream {
+    color: var(--color-cream);
+  }
+</style>

@@ -1,0 +1,540 @@
+{
+  "version": "1.0",
+  "generated": "2025-01-14",
+  "total_images": 24,
+  "style_guide": {
+    "color_grading": {
+      "temperature": "+8K",
+      "contrast": "1.15x",
+      "saturation": "+8%",
+      "clarity": "+12%",
+      "vignette": "-12% (hero only)"
+    },
+    "formats": ["avif", "webp", "jpg"],
+    "quality": {
+      "avif": 70,
+      "webp": 82,
+      "jpg": 85
+    }
+  },
+  "images": [
+    {
+      "id": "home-hero-01",
+      "page": "home",
+      "section": "hero",
+      "purpose": "Welcome banner showcasing premium quality",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976",
+        "photographer": "Kyle Mackie",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "avif": "home-hero-01.avif",
+        "webp": "home-hero-01.webp",
+        "jpg": "home-hero-01.jpg"
+      },
+      "alt": "Premium marbled ribeye steaks displayed on rustic wooden surface with natural lighting",
+      "caption": "בשר בקר מיושן איכותי - הטוב ביותר במרמת גן",
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "ratios": ["16:9", "21:9"],
+      "export_sizes": {
+        "hero": 2400,
+        "xl": 1920,
+        "lg": 1280,
+        "md": 960,
+        "sm": 640
+      },
+      "estimated_sizes_kb": {
+        "hero_avif": 320,
+        "hero_webp": 380,
+        "hero_jpg": 420,
+        "xl_avif": 260,
+        "xl_webp": 310,
+        "lg_avif": 200,
+        "md_avif": 150,
+        "sm_avif": 100
+      },
+      "srcset": [
+        {
+          "w": 640,
+          "path": "/img/home-hero-01-640.avif",
+          "type": "image/avif"
+        },
+        {
+          "w": 960,
+          "path": "/img/home-hero-01-960.avif",
+          "type": "image/avif"
+        },
+        {
+          "w": 1280,
+          "path": "/img/home-hero-01-1280.avif",
+          "type": "image/avif"
+        },
+        {
+          "w": 1920,
+          "path": "/img/home-hero-01-1920.avif",
+          "type": "image/avif"
+        },
+        {
+          "w": 2400,
+          "path": "/img/home-hero-01-2400.avif",
+          "type": "image/avif"
+        }
+      ],
+      "sizes": "(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Boost warmth +8K, add subtle vignette -12%, enhance clarity +15%"
+    },
+    {
+      "id": "home-about-01",
+      "page": "home",
+      "section": "about",
+      "purpose": "Show craftsmanship and personal touch",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1607532941433-304659e8198a",
+        "photographer": "Taylor Kiser",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "webp": "home-about-01.webp",
+        "jpg": "home-about-01.jpg"
+      },
+      "alt": "Skilled butcher preparing fresh cuts at traditional butcher shop counter",
+      "caption": "מסורת של למעלה מ-50 שנה",
+      "focal_point": {
+        "x": 0.6,
+        "y": 0.5
+      },
+      "ratios": ["3:2", "4:3"],
+      "export_sizes": {
+        "lg": 1600,
+        "md": 1200,
+        "sm": 800
+      },
+      "estimated_sizes_kb": {
+        "lg_webp": 220,
+        "lg_jpg": 280,
+        "md_webp": 170,
+        "sm_webp": 110
+      },
+      "srcset": [
+        {
+          "w": 800,
+          "path": "/img/home-about-01-800.webp"
+        },
+        {
+          "w": 1200,
+          "path": "/img/home-about-01-1200.webp"
+        },
+        {
+          "w": 1600,
+          "path": "/img/home-about-01-1600.webp"
+        }
+      ],
+      "sizes": "(max-width: 768px) 100vw, 50vw",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Natural lighting preferred, boost shadows +10% for detail"
+    },
+    {
+      "id": "beef-hero-01",
+      "page": "beef",
+      "section": "hero",
+      "purpose": "Category intro showcasing aged beef",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1603048588665-791ca8ffe39e",
+        "photographer": "José Ignacio Pompé",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "avif": "beef-hero-01.avif",
+        "webp": "beef-hero-01.webp",
+        "jpg": "beef-hero-01.jpg"
+      },
+      "alt": "Premium aged beef cuts displayed on wooden board showing marbling and quality",
+      "caption": "בשר בקר מיושן במקום - טעם ורכות מושלמים",
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.4
+      },
+      "ratios": ["16:9", "21:9"],
+      "export_sizes": {
+        "hero": 2400,
+        "xl": 1920,
+        "lg": 1280,
+        "md": 960,
+        "sm": 640
+      },
+      "estimated_sizes_kb": {
+        "hero_avif": 310,
+        "hero_webp": 370,
+        "xl_avif": 250,
+        "lg_avif": 190,
+        "md_avif": 140
+      },
+      "srcset": [
+        {
+          "w": 640,
+          "path": "/img/beef-hero-01-640.avif"
+        },
+        {
+          "w": 960,
+          "path": "/img/beef-hero-01-960.avif"
+        },
+        {
+          "w": 1280,
+          "path": "/img/beef-hero-01-1280.avif"
+        },
+        {
+          "w": 1920,
+          "path": "/img/beef-hero-01-1920.avif"
+        }
+      ],
+      "sizes": "(max-width: 768px) 100vw, 100vw",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Dark vignette -12%, enhance reds +10%, high clarity"
+    },
+    {
+      "id": "beef-product-ribeye",
+      "page": "beef",
+      "section": "products",
+      "purpose": "Ribeye product thumbnail",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1558030006-450675393462",
+        "photographer": "Eiliv Aceron",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "webp": "beef-ribeye.webp",
+        "jpg": "beef-ribeye.jpg"
+      },
+      "alt": "Fresh ribeye steak with excellent marbling on clean white background",
+      "caption": "אנטריקוט - נתח פרימיום עסיסי",
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "ratios": ["4:3", "1:1"],
+      "export_sizes": {
+        "lg": 800,
+        "md": 600,
+        "sm": 400
+      },
+      "estimated_sizes_kb": {
+        "lg_webp": 95,
+        "lg_jpg": 130,
+        "md_webp": 70,
+        "sm_webp": 45
+      },
+      "srcset": [
+        {
+          "w": 400,
+          "path": "/img/beef-ribeye-400.webp"
+        },
+        {
+          "w": 600,
+          "path": "/img/beef-ribeye-600.webp"
+        },
+        {
+          "w": 800,
+          "path": "/img/beef-ribeye-800.webp"
+        }
+      ],
+      "sizes": "(max-width: 768px) 50vw, 33vw",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Clean background, centered subject, high clarity for texture"
+    },
+    {
+      "id": "lamb-hero-01",
+      "page": "lamb",
+      "section": "hero",
+      "purpose": "Category intro for lamb products",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1595777216528-071e0127ccbf",
+        "photographer": "K8",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "avif": "lamb-hero-01.avif",
+        "webp": "lamb-hero-01.webp",
+        "jpg": "lamb-hero-01.jpg"
+      },
+      "alt": "Grilled lamb chops with herbs and vegetables on rustic wooden platter",
+      "caption": "טלה איכותי - רך, עסיסי ועשיר בטעם",
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "ratios": ["16:9"],
+      "export_sizes": {
+        "hero": 2400,
+        "xl": 1920,
+        "lg": 1280,
+        "md": 960
+      },
+      "estimated_sizes_kb": {
+        "hero_avif": 330,
+        "xl_avif": 270,
+        "lg_avif": 200,
+        "md_avif": 145
+      },
+      "srcset": [
+        {
+          "w": 960,
+          "path": "/img/lamb-hero-01-960.avif"
+        },
+        {
+          "w": 1280,
+          "path": "/img/lamb-hero-01-1280.avif"
+        },
+        {
+          "w": 1920,
+          "path": "/img/lamb-hero-01-1920.avif"
+        }
+      ],
+      "sizes": "(max-width: 768px) 100vw, 100vw",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Boost reds +8%, warm temperature, appetizing presentation"
+    },
+    {
+      "id": "chicken-hero-01",
+      "page": "chicken",
+      "section": "hero",
+      "purpose": "Category intro showing freshness",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1587593810167-a84920ea0781",
+        "photographer": "Mariana Medvedeva",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "avif": "chicken-hero-01.avif",
+        "webp": "chicken-hero-01.webp",
+        "jpg": "chicken-hero-01.jpg"
+      },
+      "alt": "Fresh whole chicken on clean white surface demonstrating quality and freshness",
+      "caption": "עוף טרי מדי יום - איכות מובטחת",
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "ratios": ["16:9"],
+      "export_sizes": {
+        "hero": 2400,
+        "xl": 1920,
+        "lg": 1280,
+        "md": 960
+      },
+      "estimated_sizes_kb": {
+        "hero_avif": 300,
+        "xl_avif": 240,
+        "lg_avif": 180,
+        "md_avif": 130
+      },
+      "srcset": [
+        {
+          "w": 960,
+          "path": "/img/chicken-hero-01-960.avif"
+        },
+        {
+          "w": 1280,
+          "path": "/img/chicken-hero-01-1280.avif"
+        },
+        {
+          "w": 1920,
+          "path": "/img/chicken-hero-01-1920.avif"
+        }
+      ],
+      "sizes": "(max-width: 768px) 100vw, 100vw",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Clean, bright look, minimal editing, natural freshness"
+    },
+    {
+      "id": "homemade-hero-01",
+      "page": "homemade",
+      "section": "hero",
+      "purpose": "Category intro for house-made products",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+        "photographer": "amirali mirhashemian",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "avif": "homemade-hero-01.avif",
+        "webp": "homemade-hero-01.webp",
+        "jpg": "homemade-hero-01.jpg"
+      },
+      "alt": "Gourmet beef burger with fresh vegetables and sesame bun on wooden board",
+      "caption": "תוצרת בית - קבב, המבורגרים ונקניקים מוכנים במקום",
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "ratios": ["16:9"],
+      "export_sizes": {
+        "hero": 2400,
+        "xl": 1920,
+        "lg": 1280,
+        "md": 960
+      },
+      "estimated_sizes_kb": {
+        "hero_avif": 340,
+        "xl_avif": 280,
+        "lg_avif": 210,
+        "md_avif": 155
+      },
+      "srcset": [
+        {
+          "w": 960,
+          "path": "/img/homemade-hero-01-960.avif"
+        },
+        {
+          "w": 1280,
+          "path": "/img/homemade-hero-01-1280.avif"
+        },
+        {
+          "w": 1920,
+          "path": "/img/homemade-hero-01-1920.avif"
+        }
+      ],
+      "sizes": "(max-width: 768px) 100vw, 100vw",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Warm, inviting, appetizing presentation"
+    },
+    {
+      "id": "homemade-product-kebab",
+      "page": "homemade",
+      "section": "products",
+      "purpose": "Kebab product thumbnail",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143",
+        "photographer": "amirali mirhashemian",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "webp": "homemade-kebab.webp",
+        "jpg": "homemade-kebab.jpg"
+      },
+      "alt": "Traditional Middle Eastern kebab skewers with vegetables and rice on plate",
+      "caption": "קבב - מבשר בקר מובחר, מתובל בתבלינים ים תיכוניים",
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "ratios": ["4:3", "1:1"],
+      "export_sizes": {
+        "lg": 800,
+        "md": 600,
+        "sm": 400
+      },
+      "estimated_sizes_kb": {
+        "lg_webp": 110,
+        "md_webp": 80,
+        "sm_webp": 50
+      },
+      "srcset": [
+        {
+          "w": 400,
+          "path": "/img/homemade-kebab-400.webp"
+        },
+        {
+          "w": 600,
+          "path": "/img/homemade-kebab-600.webp"
+        },
+        {
+          "w": 800,
+          "path": "/img/homemade-kebab-800.webp"
+        }
+      ],
+      "sizes": "(max-width: 768px) 50vw, 33vw",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Colorful, appetizing, cultural authenticity"
+    },
+    {
+      "id": "about-heritage-01",
+      "page": "about",
+      "section": "heritage",
+      "purpose": "Show generational craftsmanship",
+      "source": {
+        "site": "Unsplash",
+        "url": "https://images.unsplash.com/photo-1544025162-d76694265947",
+        "photographer": "Nicolas J Leclercq",
+        "license": "Unsplash License",
+        "license_url": "https://unsplash.com/license",
+        "accessed": "2025-01-14"
+      },
+      "file_names": {
+        "webp": "about-heritage-01.webp",
+        "jpg": "about-heritage-01.jpg"
+      },
+      "alt": "Skilled butcher hands carefully cutting premium meat on wooden cutting board",
+      "caption": "מסורת משפחתית של מעל 50 שנה",
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "ratios": ["4:3", "3:2"],
+      "export_sizes": {
+        "lg": 1600,
+        "md": 1200,
+        "sm": 800
+      },
+      "estimated_sizes_kb": {
+        "lg_webp": 210,
+        "md_webp": 160,
+        "sm_webp": 105
+      },
+      "srcset": [
+        {
+          "w": 800,
+          "path": "/img/about-heritage-01-800.webp"
+        },
+        {
+          "w": 1200,
+          "path": "/img/about-heritage-01-1200.webp"
+        },
+        {
+          "w": 1600,
+          "path": "/img/about-heritage-01-1600.webp"
+        }
+      ],
+      "sizes": "(max-width: 768px) 100vw, 50vw",
+      "attribution_required": false,
+      "avoid_flags": [],
+      "notes": "Close-up detail, emphasize craftsmanship and skill"
+    }
+  ]
+}

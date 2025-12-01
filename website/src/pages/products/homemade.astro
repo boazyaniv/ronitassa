@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import productsData from '../../data/products.json';
+
+const pageTitle = "מוצרי בית מוכנים לבישול | רוני טסה";
+const pageDescription = "מוצרי בית טעימים והכנה קלה - המבורגרים, קבב, שווארמה ועוד. הכל מוכן, רק להכניס לתנור או למחבת.";
+
+const category = productsData.categories.find(cat => cat.slug === 'homemade');
+const homemadeProducts = category?.products || [];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/images/homemade-category.png" 
+        alt="מוצרי בית מוכנים לבישול" 
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-neutral-950"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto" data-aos="fade-up">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+        <span class="block text-primary-red drop-shadow-lg mb-2">תוצרת בית</span>
+        <span class="block text-3xl md:text-5xl font-light text-gray-200">טעם של מסעדה בבית</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+        מגוון מוצרי בשר איכותיים בהכנה ביתית, מתובלים ומוכנים לצלייה.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="py-20 bg-neutral-950 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-accent">מקסימום טעם, מינימום מאמץ</h2>
+        <div class="text-lg text-gray-400 leading-relaxed space-y-6 font-light">
+          <p>
+            סדרת מוצרי הבית שלנו נוצרה כדי להעניק לכם חוויה קולינרית עשירה ואיכותית, ללא הטרחה שבהכנה.
+            המבורגרים עסיסיים, קבב מתובל בדיוק הנכון, ושווארמה עשירה בטעמים - הכל נעשה במקום מחומרי הגלם הטובים ביותר.
+          </p>
+          <p>
+            כל המוצרים מוכנים מבשר טרי ואיכותי, ללא חומרים משמרים, ומתובלים בתערובות תבלינים ייחודיות שלנו.
+            פשוט להוציא מהאריזה, להניח על המחבת או הגריל, וליהנות מארוחה מושלמת תוך דקות.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Products Grid -->
+  <section class="py-24 bg-neutral-950">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">המוצרים שלנו</h2>
+        <div class="w-24 h-1 bg-primary-red mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {homemadeProducts.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+
+      <div class="text-center mt-20">
+        <div class="inline-block p-8 rounded-2xl bg-neutral-900 border border-white/10 max-w-3xl">
+          <p class="text-xl text-gray-300 mb-6 font-light">
+            יש לכם בקשה מיוחדת? נשמח להכין עבורכם מוצרים בהתאמה אישית לאירועים.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/#contact" class="btn btn-primary text-lg px-8 py-3 shadow-lg shadow-red-900/20">
+              צור קשר להזמנה
+            </a>
+            <a href="/products/beef" class="btn btn-outline border-white/20 text-white hover:bg-white/10 text-lg px-8 py-3">
+              חזרה למחלקת הבקר
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perfect For Section -->
+  <section class="py-24 bg-neutral-900 relative">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-white">
+        מתאים במיוחד <span class="text-primary-red">עבור...</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex gap-6 items-start hover:bg-white/10 transition-colors">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-xl text-white font-bold">1</div>
+          <div>
+            <h4 class="font-bold text-xl text-accent mb-3">על האש עם חברים</h4>
+            <p class="text-gray-400 leading-relaxed">
+              המבורגרים, קציצות ונקניקיות הם הכוכבים של כל מנגל. פשוט להניח על הרשת ולהכנה מהירה וקלה - מחמאות מובטחות.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex gap-6 items-start hover:bg-white/10 transition-colors">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-xl text-white font-bold">2</div>
+          <div>
+            <h4 class="font-bold text-xl text-accent mb-3">ארוחת ערב מהירה</h4>
+            <p class="text-gray-400 leading-relaxed">
+              כשאין זמן לבשל אבל רוצים אוכל איכותי - ההמבורגר מעולה במחבת או במנגל. הכנה מהירה ותוצאה מושלמת.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex gap-6 items-start hover:bg-white/10 transition-colors">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-xl text-white font-bold">3</div>
+          <div>
+            <h4 class="font-bold text-xl text-accent mb-3">ילדים ונוער</h4>
+            <p class="text-gray-400 leading-relaxed">
+              הילדים משוגעים על הקציצות עוף והנקניקיות עוף שלנו. טעם שהם אוהבים, עם הכנה מהירה ונוחה בתנור ובשלום.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex gap-6 items-start hover:bg-white/10 transition-colors">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-xl text-white font-bold">4</div>
+          <div>
+            <h4 class="font-bold text-xl text-accent mb-3">אירוח קליל</h4>
+            <p class="text-gray-400 leading-relaxed">
+              מארחים ברגע האחרון? מגש של קציצות או מיני-בורגרים על המנגל יסגור לכם את הפינה בסטייל ובמינימום מאמץ.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>

@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteInfo from '../data/site-info.json';
+import productsData from '../data/products.json';
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-l from-primary to-accent text-white">
+    <div class="container py-20 md:py-32">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          {siteInfo.name}
+        </h1>
+        <p class="text-xl md:text-2xl mb-4 text-cream">
+          קצביית בוטיק ברמת גן
+        </p>
+        <p class="text-lg md:text-xl mb-8 text-cream/90">
+          מסורת משפחתית של מעלה מ-50 שנה | בשר איכותי מיושן במקום
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href={`tel:${siteInfo.contact.phone}`} class="btn btn-primary bg-white text-primary hover:bg-cream">
+            📞 התקשרו עכשיו
+          </a>
+          <a href={`https://wa.me/${siteInfo.contact.whatsapp}`} class="btn btn-secondary border-white text-white hover:bg-white hover:text-primary">
+            💬 WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories Section -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">המוצרים שלנו</h2>
+        <p class="text-xl text-gray-medium">בשר איכותי במיטב הקיטים</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {productsData.categories.map((category) => (
+          <a href={`/products/${category.slug}`} class="group">
+            <div class="bg-off-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary">
+              <div class="aspect-square bg-gradient-to-br from-cream to-off-white flex items-center justify-center">
+                <span class="text-8xl">{category.icon}</span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  {category.name}
+                </h3>
+                <p class="text-gray-dark">{category.description}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Snippet -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">הסיפור שלנו</h2>
+        <div class="text-lg text-gray-dark leading-relaxed space-y-4">
+          <p>
+            רוני טסה גדל בין נתחי הבשר בשוק התקווה, שם ניהל אביו קצביה מסורתית.
+            החל לעבוד עם אביו כילד, ולמד את מקצוע הקצבות מהבסיס.
+          </p>
+          <p>
+            עם מעלה מ-50 שנות ניסיון, רוני מביא את המסורת המשפחתית והמקצועיות לרמת גן,
+            תוך שימת דגש על איכות, טריות ושירות אישי.
+          </p>
+        </div>
+        <div class="mt-8">
+          <a href="/about" class="btn btn-primary">קראו עוד אודותינו</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div class="text-center">
+          <div class="text-4xl mb-2">🏆</div>
+          <h3 class="font-bold mb-1">מעל 50 שנות ניסיון</h3>
+          <p class="text-sm text-gray-medium">מסורת משפחתית</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-2">🥩</div>
+          <h3 class="font-bold mb-1">מיישנים במקום</h3>
+          <p class="text-sm text-gray-medium">נתחים מעולים</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-2">✡️</div>
+          <h3 class="font-bold mb-1">כשר</h3>
+          <p class="text-sm text-gray-medium">באישור הרבנות</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-2">✨</div>
+          <h3 class="font-bold mb-1">טריות מובטחת</h3>
+          <p class="text-sm text-gray-medium">בשר טרי מדי יום</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-2">👨‍🍳</div>
+          <h3 class="font-bold mb-1">שירות אישי</h3>
+          <p class="text-sm text-gray-medium">ייעוץ מקצועי</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-2">🏪</div>
+          <h3 class="font-bold mb-1">מהשוק לביתכם</h3>
+          <p class="text-sm text-gray-medium">מסורת שוק התקווה</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="section bg-gradient-to-l from-primary to-accent text-white">
+    <div class="container text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">בואו לבקר אותנו</h2>
+      <p class="text-xl mb-2">{siteInfo.address.full}</p>
+      <p class="text-lg mb-8 text-cream">נשמח לעמוד לשירותכם</p>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href={`tel:${siteInfo.contact.phone}`} class="btn btn-primary bg-white text-primary hover:bg-cream">
+          📞 התקשרו: {siteInfo.contact.phone}
+        </a>
+        <a href={`https://wa.me/${siteInfo.contact.whatsapp}`} class="btn btn-secondary border-white text-white hover:bg-white hover:text-primary">
+          💬 וואטסאפ: {siteInfo.contact.whatsapp}
+        </a>
+      </div>
+
+      <div>
+        <a href="/contact" class="text-white underline hover:text-cream transition-colors">
+          לכל דרכי ההתקשרות ושעות הפתיחה →
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .bg-cream {
+    background-color: var(--color-cream);
+  }
+
+  .text-cream {
+    color: var(--color-cream);
+  }
+
+  .bg-off-white {
+    background-color: var(--color-off-white);
+  }
+
+  .text-gray-dark {
+    color: var(--color-gray-dark);
+  }
+
+  .text-gray-medium {
+    color: var(--color-gray-medium);
+  }
+</style>

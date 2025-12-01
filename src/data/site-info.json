@@ -1,0 +1,60 @@
+{
+  "name": "רוני טסה",
+  "tagline": "מוצרי בשר וכל השאר",
+  "description": "קצביית בוטיק ברמת גן עם מעל 50 שנות ניסיון משפחתי",
+  "contact": {
+    "phone": "03-631-1099",
+    "whatsapp": "0528718138",
+    "facebook": "https://www.facebook.com/Rontassa",
+    "instagram": "https://www.instagram.com/ronitassa",
+    "instagramHandle": "@ronitassa"
+  },
+  "address": {
+    "street": "שלם 12",
+    "city": "רמת גן",
+    "country": "ישראל",
+    "full": "רחוב שלם 12, רמת גן, ישראל",
+    "googleMapsUrl": "https://maps.app.goo.gl/kHf6CiTJqFxeuHA38"
+  },
+  "hours": {
+    "sunday": {
+      "open": "7:30",
+      "close": "19:00",
+      "label": "ראשון"
+    },
+    "monday": {
+      "open": "7:30",
+      "close": "19:00",
+      "label": "שני"
+    },
+    "tuesday": {
+      "open": "7:30",
+      "close": "19:00",
+      "label": "שלישי"
+    },
+    "wednesday": {
+      "open": "7:30",
+      "close": "19:00",
+      "label": "רביעי"
+    },
+    "thursday": {
+      "open": "7:30",
+      "close": "19:00",
+      "label": "חמישי"
+    },
+    "friday": {
+      "open": "7:30",
+      "close": "13:30",
+      "label": "שישי"
+    },
+    "saturday": {
+      "closed": true,
+      "label": "שבת"
+    }
+  },
+  "seo": {
+    "siteUrl": "https://ronitassa.co.il",
+    "defaultTitle": "רוני טסה - קצביית בוטיק ברמת גן | 50+ שנות ניסיון",
+    "defaultDescription": "קצביית בוטיק ברמת גן עם מעל 50 שנות ניסיון משפחתי. בשר בקר, טלה ועוף איכותי, מיושן במקום. מסורת שוק התקווה ברמת גן. רח' שלם 12."
+  }
+}

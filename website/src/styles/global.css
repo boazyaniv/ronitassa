@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #C62828;
+  --color-primary-dark: #8B0000;
+  --color-accent: #BF9B5F;
+  --color-accent-light: #D4AF76;
+  --color-black: #1a1a1a;
+  --color-dark: #2d2d2d;
+  --color-off-white: #f8f6f3;
+  --color-white: #ffffff;
+  --color-gray-dark: #424242;
+  --color-gray-medium: #757575;
+  --color-gray-light: #e5e5e5;
+  --color-cream: #F0EFEB;
+
+  /* Fonts */
+  --font-sans: 'Assistant', 'Noto Sans Hebrew', 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Base Styles */
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-black antialiased;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold leading-tight;
+}
+
+/* Utility Components */
+@layer components {
+  .container {
+    @apply w-full max-w-[1280px] mx-auto px-4 md:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-200 cursor-pointer text-base;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-black text-black hover:bg-black hover:text-white hover:-translate-y-0.5;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+}
+
+/* Animations */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+}

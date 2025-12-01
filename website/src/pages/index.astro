@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import productsData from '../data/products.json';
+import siteInfo from '../data/site-info.json';
+
+const whatsappNumber = siteInfo.contact.whatsapp.replace(/^0/, '972');
+
+const categories = [
+  { id: 'beef', title: 'בקר טרי', image: '/images/beef-category.png', link: '/products/beef' },
+  { id: 'lamb', title: 'טלה משובח', image: '/images/lamb-category.png', link: '/products/lamb' },
+  { id: 'chicken', title: 'עוף טרי', image: '/images/chicken-category.png', link: '/products/chicken' },
+  { id: 'homemade', title: 'תוצרת בית', image: '/images/homemade-category.png', link: '/products/homemade' },
+];
+
+const features = [
+  { icon: '🌟', title: 'איכות ללא פשרות', description: 'בשר טרי ואיכותי שנבחר בקפידה יום יום.' },
+  { icon: '🔪', title: 'מומחיות של שנים', description: '50 שנות ניסיון בקיצוב ויישון בשרים.' },
+  { icon: '🥩', title: 'יישון בשר במקום', description: 'תהליך יישון מבוקר לבשר רך במיוחד עם טעם עמוק ועשיר.' },
+];
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/images/hero-bg.png" 
+        alt="נתחי בשר מובחרים" 
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto" data-aos="fade-up">
+      <h2 class="text-xl md:text-2xl font-light tracking-[0.2em] mb-4 text-accent uppercase">מאז 1974</h2>
+      <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight tracking-tight">
+        <span class="block text-primary-red drop-shadow-lg">רוני טסה</span>
+        <span class="block text-4xl md:text-6xl mt-2 font-light">קצביית בוטיק</span>
+      </h1>
+      <p class="text-lg md:text-2xl mb-10 text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
+        מסורת של איכות, טריות וטעם בלתי נשכח. הבשרים הטובים ביותר, ישר מהקצב אליכם לצלחת.
+      </p>
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <a href="#products" class="btn btn-primary text-xl py-4 px-10 shadow-xl shadow-red-900/20 hover:shadow-red-900/40 transform hover:-translate-y-1 transition-all duration-300">
+          לכל המוצרים
+        </a>
+        <a href="#contact" class="btn bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 text-xl py-4 px-10 shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+          צור קשר
+        </a>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+
+
+  <!-- Categories Section -->
+  <section id="products" class="py-24 bg-neutral-950">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">המחלקות שלנו</h2>
+        <div class="w-24 h-1 bg-primary-red mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {categories.map((category) => (
+          <a href={category.link} class="group relative h-[400px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block">
+            <img 
+              src={category.image} 
+              alt={category.title} 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-center transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <h3 class="text-3xl font-bold text-white mb-2">{category.title}</h3>
+              <span class="inline-block text-accent text-sm font-bold tracking-wider uppercase border-b border-accent pb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                לצפייה במוצרים
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-24 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2 relative">
+          <div class="absolute -inset-4 bg-primary-red/10 rounded-3xl transform -rotate-3"></div>
+          <img 
+            src="/images/hero-bg.png" 
+            alt="הקצבייה שלנו" 
+            class="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+          />
+        </div>
+        <div class="lg:w-1/2 text-right">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            מסורת של <span class="text-primary-red">בשר משובח</span>
+          </h2>
+          <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+            מאז 1974, אנו ברוני טסה גאים להביא ללקוחותינו את הבשר האיכותי ביותר. 
+            הסוד שלנו הוא פשוט: אהבה למקצוע, הקפדה על חומרי גלם מעולים, ושירות אישי לכל לקוח.
+          </p>
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+            אצלנו תמצאו נתחים מיושנים בקפידה, עופות טריים יום יום, ומגוון מוצרי בוטיק בייצור עצמי, 
+            בנוסף למוצרי מכולת ודגים קפואים - שיהפכו כל ארוחה לחגיגה.
+          </p>
+          <a href="/about" class="btn bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-3 transition-all duration-300">
+            קרא עוד עלינו
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="py-24 bg-neutral-950 text-white relative overflow-hidden border-t border-white/10">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-red/20 via-transparent to-transparent"></div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2 class="text-4xl md:text-6xl font-bold mb-8 text-white drop-shadow-lg">מוכנים לחווית בשר אחרת?</h2>
+      <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-gray-300 leading-relaxed">
+        הזמינו עכשיו בוואטסאפ או בטלפון ותיהנו מבשר טרי ואיכותי במשלוח עד הבית.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${siteInfo.contact.phone}`} class="btn bg-primary-red text-white hover:bg-red-700 text-xl py-4 px-12 shadow-xl shadow-red-900/30 hover:shadow-red-900/50 transition-all">
+          חייגו אלינו
+        </a>
+        <a href={`https://wa.me/${whatsappNumber}`} class="btn bg-[#25D366] text-white hover:bg-[#128C7E] text-xl py-4 px-12 shadow-xl shadow-green-900/30 hover:shadow-green-900/50 transition-all">
+          הזמנה בוואטסאפ
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

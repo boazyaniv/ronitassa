@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import productsData from '../../data/products.json';
+
+const pageTitle = "בשר עוף טרי מדי יום | רוני טסה";
+const pageDescription = "עוף טרי ואיכותי - חזה, שוקיים, כנפיים ועוף שלם. קבלת משלוחים טריים מדי יום, איכות מובטחת.";
+
+const category = productsData.categories.find(cat => cat.slug === 'chicken');
+const chickenProducts = category?.products || [];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/images/chicken-category.png" 
+        alt="בשר עוף טרי ואיכותי" 
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-neutral-950"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto" data-aos="fade-up">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+        <span class="block text-primary-red drop-shadow-lg mb-2">עוף טרי יום יום</span>
+        <span class="block text-3xl md:text-5xl font-light text-gray-200">איכות ללא פשרות</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+        עוף טרי המגיע אלינו מדי בוקר, נקי, איכותי ומוכן לבישול.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="py-20 bg-neutral-950 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-accent">טריות מעל הכל</h2>
+        <div class="text-lg text-gray-400 leading-relaxed space-y-6 font-light">
+          <p>
+            אנחנו מקבלים משלוחים של עוף טרי כל יום, כך שאתם תמיד מקבלים את המוצר הטרי והאיכותי ביותר.
+            העוף שלנו עובר בקרת איכות קפדנית ומעובד באופן מקצועי על ידי הקצבים המנוסים שלנו.
+          </p>
+          <p>
+            בין אם אתם מחפשים חזה לשניצל דק ופריך, שוקיים עסיסיות לתנור, כנפיים למנגל, או עוף שלם לארוחת שבת -
+            אצלנו תמצאו את העוף הטרי והנקי ביותר, מוכן לשימוש מיידי.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Products Grid -->
+  <section class="py-24 bg-neutral-950">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">מגוון נתחי העוף</h2>
+        <div class="w-24 h-1 bg-primary-red mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {chickenProducts.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+
+      <div class="text-center mt-20">
+        <div class="inline-block p-8 rounded-2xl bg-neutral-900 border border-white/10 max-w-3xl">
+          <p class="text-xl text-gray-300 mb-6 font-light">
+            צריכים כמות גדולה לאירוע או לחג? אנחנו כאן בשבילכם עם שירות אישי ומקצועי.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/#contact" class="btn btn-primary text-lg px-8 py-3 shadow-lg shadow-red-900/20">
+              צור קשר להזמנה
+            </a>
+            <a href="/products/homemade" class="btn btn-outline border-white/20 text-white hover:bg-white/10 text-lg px-8 py-3">
+              למוצרים תוצרת בית
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cooking Tips -->
+  <section class="py-24 bg-neutral-900 relative">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-white">
+        טיפים להכנת <span class="text-primary-red">עוף מושלם</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex gap-6 items-start hover:bg-white/10 transition-colors">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-xl text-white font-bold">1</div>
+          <div>
+            <h4 class="font-bold text-xl text-accent mb-3">טמפרטורה פנימית</h4>
+            <p class="text-gray-400 leading-relaxed">
+              לבישול בטוח ועסיסי, ודאו שהעוף מגיע לטמפרטורה פנימית של 75 מעלות צלזיוס בחלק העבה ביותר.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex gap-6 items-start hover:bg-white/10 transition-colors">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-xl text-white font-bold">2</div>
+          <div>
+            <h4 class="font-bold text-xl text-accent mb-3">שמירה על עסיסיות</h4>
+            <p class="text-gray-400 leading-relaxed">
+              השריית חזה עוף בתמיסת מי מלח (brining) למשך שעה לפני הבישול תבטיח תוצאה עסיסית ורכה במיוחד.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex gap-6 items-start hover:bg-white/10 transition-colors">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-xl text-white font-bold">3</div>
+          <div>
+            <h4 class="font-bold text-xl text-accent mb-3">חיתוך נכון</h4>
+            <p class="text-gray-400 leading-relaxed">
+              תמיד חתכו את חזה העוף נגד כיוון הסיבים. פעולה פשוטה זו מבטיחה שהבשר יהיה רך וקל ללעיסה.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex gap-6 items-start hover:bg-white/10 transition-colors">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-xl text-white font-bold">4</div>
+          <div>
+            <h4 class="font-bold text-xl text-accent mb-3">תיבול מוקדם</h4>
+            <p class="text-gray-400 leading-relaxed">
+              תבלו את העוף לפחות 30 דקות לפני הבישול (ואפילו לילה שלם במקרר) כדי לאפשר לטעמים לחדור לעומק הבשר.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

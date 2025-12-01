@@ -1,0 +1,69 @@
+---
+import productsData from '../data/products.json';
+
+interface Props {
+  product: any;
+}
+
+const { product } = Astro.props;
+const cookingMethods = productsData.cookingMethods;
+const badges = productsData.badges;
+---
+
+<div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-primary-red/30 hover:shadow-2xl hover:shadow-primary-red/10 transition-all duration-300 transform hover:-translate-y-2">
+  <!-- Product Image -->
+  <div class="aspect-square relative overflow-hidden bg-neutral-900">
+    {product.image ? (
+      <img
+        src={product.image}
+        alt={product.name}
+        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        loading="lazy"
+      />
+    ) : (
+      <div class="w-full h-full flex items-center justify-center bg-neutral-800">
+        <svg class="w-20 h-20 text-accent/20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+        </svg>
+      </div>
+    )}
+    {product.badge && (
+      <div class={`absolute top-3 left-3 px-4 py-1.5 rounded-full text-white text-sm font-bold shadow-lg backdrop-blur-md ${
+        product.badge === 'premium' ? 'bg-gradient-to-r from-accent to-yellow-600' :
+        product.badge === 'popular' ? 'bg-gradient-to-r from-primary-red to-red-800' :
+        'bg-gradient-to-r from-green-600 to-green-800'
+      }`}>
+        {badges[product.badge].label}
+      </div>
+    )}
+  </div>
+
+  <!-- Product Info -->
+  <div class="p-6">
+    <h3 class="text-2xl font-bold mb-2 text-white group-hover:text-accent transition-colors">{product.name}</h3>
+    {product.cutType && (
+      <p class="text-sm mb-3 text-accent font-semibold tracking-wider uppercase">{product.cutType}</p>
+    )}
+    <p class="mb-4 text-gray-400 leading-relaxed text-sm">{product.description}</p>
+
+    <!-- Cooking Methods -->
+    {product.cookingMethods && product.cookingMethods.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-4">
+        {product.cookingMethods.map((method: string) => (
+          <span class="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-white/5 text-gray-300 border border-white/5">
+            <span>{cookingMethods[method].icon}</span>
+            <span>{cookingMethods[method].name}</span>
+          </span>
+        ))}
+      </div>
+    )}
+
+    {product.suggestedUse && (
+      <div class="pt-3 border-t border-white/10 mt-auto">
+        <p class="text-sm text-gray-500">
+          <strong class="text-gray-300">מומלץ ל:</strong> {product.suggestedUse}
+        </p>
+      </div>
+    )}
+  </div>
+</div>
