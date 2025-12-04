@@ -26,3 +26,6 @@ pnpm-debug.log*
 # AI and Tool Configuration
 .claude/
 .mcp.json
+
+# Local Netlify folder
+.netlify
