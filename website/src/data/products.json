@@ -14,50 +14,189 @@
           "name": "אנטריקוט",
           "cutType": "נתח פרימיום",
           "description": "נתח פרימיום עסיסי עם שיש שומן",
-          "suggestedUse": "גריל, פאן",
-          "cookingMethods": [
-            "grill",
-            "pan"
+          "price": "210 ₪ לק״ג",
+          "cuttingOptions": [
+            "סטייקים",
+            "גוש שלם",
+            "פרוס דק",
+            "משופד"
           ],
           "image": "/images/products/ribeye.png",
           "badge": "recommended"
         },
         {
           "id": "tenderloin",
-          "name": "פילה",
+          "name": "פילה בקר",
           "cutType": "נתח עדין",
           "description": "נתח רך במיוחד, דל שומן",
-          "suggestedUse": "גריל, תנור",
-          "cookingMethods": [
-            "grill",
-            "oven"
+          "price": "300 ₪ לק״ג",
+          "cuttingOptions": [
+            "גוש שלם",
+            "מדליונים",
+            "פרוס לקרפצ'יו"
           ],
           "image": "/images/products/tenderloin.png",
           "badge": "popular"
         },
         {
-          "id": "chuck-roast",
-          "name": "צלי כתף",
-          "cutType": "לבישול איטי",
-          "description": "מושלם לבישול איטי ותבשילים",
-          "suggestedUse": "תנור, סיר",
-          "cookingMethods": [
-            "oven",
-            "pot"
+          "id": "sirloin",
+          "name": "סינטה",
+          "cutType": "נתח פרימיום",
+          "description": "נתח אחורי משובח עם ציפוי שומן עדין",
+          "price": "140 ₪ לק״ג",
+          "cuttingOptions": [
+            "סטייקים",
+            "גוש שלם",
+            "פרוס דק"
           ],
-          "image": "/images/products/chuck-roast.png"
+          "image": "/images/products/sirloin.png"
         },
         {
           "id": "asado",
           "name": "אסאדו",
           "cutType": "צלעות",
           "description": "צלעות עסיסיות, מעולות לגריל או תנור",
-          "suggestedUse": "גריל, תנור",
-          "cookingMethods": [
-            "grill",
-            "oven"
+          "price": "89 ₪ (עם עצם) / 110 ₪ (ללא עצם) לק״ג",
+          "cuttingOptions": [
+            "עם עצם",
+            "ללא עצם"
           ],
           "image": "/images/products/asado.png"
+        },
+        {
+          "id": "chuck-roast",
+          "name": "צלי כתף",
+          "cutType": "לבישול איטי",
+          "description": "מושלם לבישול איטי ותבשילים",
+          "price": "110 ₪ לק״ג",
+          "cuttingOptions": [
+            "גוש שלם",
+            "פרוס",
+            "קוביות",
+            "רצועות"
+          ],
+          "image": "/images/products/chuck-roast.png"
+        },
+        {
+          "id": "rump",
+          "name": "שייטל",
+          "cutType": "נתח אחורי",
+          "description": "נתח עסיסי ורך, מתאים למגוון שימושים",
+          "price": "120 ₪ לק״ג",
+          "cuttingOptions": [
+            "סטייקים",
+            "גוש שלם",
+            "שניצל וינאי",
+            "רצועות"
+          ],
+          "image": "/images/products/rump.png"
+        },
+        {
+          "id": "picanha",
+          "name": "פיקאניה",
+          "cutType": "נתח ברזילאי",
+          "description": "נתח פופולרי עם שכבת שומן עסיסית",
+          "price": "160 ₪ לק״ג",
+          "cuttingOptions": [
+            "גוש שלם",
+            "פרוס לסטייקים"
+          ],
+          "image": "/images/products/picanha.png"
+        },
+        {
+          "id": "ground-beef",
+          "name": "בשר טחון",
+          "cutType": "טחון",
+          "description": "בשר בקר טרי טחון במקום",
+          "price": "85 ₪ לק״ג",
+          "cuttingOptions": [
+            "טחון"
+          ],
+          "image": "/images/products/ground-beef.png"
+        },
+        {
+          "id": "ground-mix",
+          "name": "טחון בקר וטלה",
+          "cutType": "טחון",
+          "description": "תערובת עסיסית של בקר וטלה",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "טחון"
+          ],
+          "image": "/images/products/ground-mix.png"
+        },
+        {
+          "id": "ossobuco",
+          "name": "אוסובוקו",
+          "cutType": "לבישול איטי",
+          "description": "נתח שריר הזרוע עם עצם מח",
+          "price": "89 ₪ לק״ג",
+          "cuttingOptions": [
+            "פרוס עם עצם"
+          ],
+          "image": "/images/products/beef-ossobuco.png"
+        },
+        {
+          "id": "chuck-eye-roll",
+          "name": "אונטריב",
+          "cutType": "לבישול ארוך",
+          "description": "נתח עשיר בשומן, מתפרק בבישול ארוך",
+          "price": "98 ₪ לק״ג",
+          "cuttingOptions": [
+            "קוביות",
+            "גוש שלם"
+          ],
+          "image": "/images/products/chuck-eye-roll.png"
+        },
+        {
+          "id": "neck",
+          "name": "צוואר",
+          "cutType": "לבישול ארוך",
+          "description": "נתח מצוין לטחינה או בישול ארוך",
+          "price": "98 ₪ לק״ג",
+          "cuttingOptions": [
+            "קוביות",
+            "טחון",
+            "גוש שלם"
+          ],
+          "image": "/images/products/beef-neck.png"
+        },
+        {
+          "id": "central-shoulder",
+          "name": "כתף מרכזית",
+          "cutType": "דל שומן",
+          "description": "נתח רזה יחסית, מתאים לבישול ברוטב",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "פרוס",
+            "קוביות",
+            "גוש שלם"
+          ],
+          "image": "/images/products/central-shoulder.png"
+        },
+        {
+          "id": "false-fillet",
+          "name": "פילה מדומה",
+          "cutType": "לבישול",
+          "description": "לא פילה, אבל נתח נהדר בבישול ארוך",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "פרוס",
+            "גוש שלם"
+          ],
+          "image": "/images/products/false-fillet.png"
+        },
+        {
+          "id": "shank",
+          "name": "שריר",
+          "cutType": "לבישול ארוך",
+          "description": "שריר הזרוע, עשיר בג'לטין וטעמים",
+          "price": "92 ₪ לק״ג",
+          "cuttingOptions": [
+            "קוביות",
+            "גוש שלם"
+          ],
+          "image": "/images/products/beef-shank.png"
         }
       ]
     },
@@ -71,41 +210,41 @@
       "image": "/images/categories/lamb.jpg",
       "products": [
         {
-          "id": "lamb-shoulder",
-          "name": "כתף טלה",
-          "cutType": "לצלייה",
-          "description": "נתח עשיר בטעם, מתאים לצלייה ותבשילים",
-          "suggestedUse": "תנור, סיר",
-          "cookingMethods": [
-            "oven",
-            "pot"
-          ],
-          "image": "/images/products/lamb-shoulder.png"
-        },
-        {
           "id": "lamb-ribs",
           "name": "צלעות טלה",
           "cutType": "לגריל",
           "description": "רכות ועסיסיות, מושלמות לגריל",
-          "suggestedUse": "גריל, תנור",
-          "cookingMethods": [
-            "grill",
-            "oven"
+          "price": "210 ₪ לק״ג",
+          "cuttingOptions": [
+            "צלעות בודדות",
+            "גוש שלם"
           ],
           "image": "/images/products/lamb-ribs.png",
           "badge": "recommended"
         },
         {
-          "id": "veal-ossobuco",
-          "name": "אוסובוקו עגל",
-          "cutType": "לבישול איטי",
-          "description": "נתחי שוק עגל עם עצם, מושלמים לבישול איטי",
-          "suggestedUse": "תנור, סיר",
-          "cookingMethods": [
-            "oven",
-            "pot"
+          "id": "lamb-shoulder",
+          "name": "כתף טלה",
+          "cutType": "לצלייה",
+          "description": "נתח עשיר בטעם, מתאים לצלייה ותבשילים",
+          "price": "130 ₪ לק״ג",
+          "cuttingOptions": [
+            "גוש שלם",
+            "פרוס"
           ],
-          "image": "/images/products/veal-ossobuco.png"
+          "image": "/images/products/lamb-shoulder.png"
+        },
+        {
+          "id": "lamb-neck",
+          "name": "צוואר טלה",
+          "cutType": "לבישול ארוך",
+          "description": "נתח שומני ועסיסי, נהדר בתנור או בסיר",
+          "price": "120 ₪ לק״ג",
+          "cuttingOptions": [
+            "פרוס עם עצם",
+            "גוש שלם"
+          ],
+          "image": "/images/products/lamb-neck.png"
         }
       ]
     },
@@ -119,54 +258,138 @@
       "image": "/images/categories/chicken.jpg",
       "products": [
         {
-          "id": "whole-chicken",
-          "name": "עוף שלם",
-          "cutType": "שלם",
-          "description": "עוף טרי שלם לצלייה או בישול",
-          "suggestedUse": "תנור",
-          "cookingMethods": [
-            "oven"
-          ],
-          "image": "/images/products/whole-chicken.png"
-        },
-        {
           "id": "chicken-breast",
           "name": "חזה עוף",
           "cutType": "דל שומן",
           "description": "נתח דל שומן, מתאים לכל סגנונות הבישול",
-          "suggestedUse": "גריל, פאן, תנור",
-          "cookingMethods": [
-            "grill",
-            "pan",
-            "oven"
+          "price": "56 ₪ (שלם) / 66 ₪ (חתוך) לק״ג",
+          "cuttingOptions": [
+            "שלם",
+            "שניצל",
+            "קוביות",
+            "רצועות"
           ],
           "image": "/images/products/chicken-breast.png",
           "badge": "popular"
         },
         {
+          "id": "spring-chicken",
+          "name": "פרגית",
+          "cutType": "עסיסי",
+          "description": "ירך עוף ללא עצם, עסיסית וטעימה",
+          "price": "80 ₪ (רגיל) / 84 ₪ (משופד) לק״ג",
+          "cuttingOptions": [
+            "סטייק",
+            "קוביות",
+            "רצועות",
+            "משופד"
+          ],
+          "image": "/images/products/spring-chicken.png"
+        },
+        {
+          "id": "chicken-legs",
+          "name": "כרעיים",
+          "cutType": "חלקי עוף",
+          "description": "רבע עוף (ירך ושוק)",
+          "price": "39 ₪ לק״ג",
+          "cuttingOptions": [
+            "שלם",
+            "חצוי"
+          ],
+          "image": "/images/products/chicken-legs.png"
+        },
+        {
+          "id": "chicken-drumsticks",
+          "name": "שוקיים",
+          "cutType": "חלקי עוף",
+          "description": "חלק תחתון של הכרע",
+          "price": "39 ₪ לק״ג",
+          "cuttingOptions": [
+            "שלם"
+          ],
+          "image": "/images/products/chicken-drumsticks.jpg"
+        },
+        {
           "id": "chicken-thighs",
-          "name": "שוקי עוף",
-          "cutType": "עסיסיות",
-          "description": "עסיסיות ומלאות טעם",
-          "suggestedUse": "תנור, גריל, סיר",
-          "cookingMethods": [
-            "oven",
-            "grill",
-            "pot"
+          "name": "ירכיים",
+          "cutType": "חלקי עוף",
+          "description": "החלק העסיסי של הכרע",
+          "price": "39 ₪ לק״ג",
+          "cuttingOptions": [
+            "שלם"
           ],
           "image": "/images/products/chicken-thighs.png"
         },
         {
+          "id": "whole-chicken",
+          "name": "עוף שלם",
+          "cutType": "שלם",
+          "description": "עוף טרי שלם לצלייה או בישול",
+          "price": "25 ₪ (רגיל) / 30 ₪ (מפורק) לק״ג",
+          "cuttingOptions": [
+            "שלם",
+            "מפורק",
+            "חתוך ל-4/8"
+          ],
+          "image": "/images/products/whole-chicken.png"
+        },
+        {
           "id": "chicken-wings",
           "name": "כנפיים",
-          "cutType": "לגריל",
-          "description": "מושלמות לגריל או תבשילים",
-          "suggestedUse": "גריל, תנור",
-          "cookingMethods": [
-            "grill",
-            "oven"
+          "cutType": "נשנוש",
+          "description": "מושלמות לגריל, תנור או ברוטב",
+          "price": "28 ₪ לק״ג",
+          "cuttingOptions": [
+            "שלמות",
+            "חצויות"
           ],
           "image": "/images/products/chicken-wings.png"
+        },
+        {
+          "id": "chicken-liver",
+          "name": "כבדים",
+          "cutType": "פנים",
+          "description": "כבד עוף טרי ונקי",
+          "price": "36 ₪ לק״ג",
+          "cuttingOptions": [
+            "שלם",
+            "צלוי"
+          ],
+          "image": "/images/products/chicken-liver.png"
+        },
+        {
+          "id": "chicken-hearts",
+          "name": "לבבות",
+          "cutType": "פנים",
+          "description": "לבבות עוף טריים",
+          "price": "40 ₪ לק״ג",
+          "cuttingOptions": [
+            "שלם",
+            "נקי"
+          ],
+          "image": "/images/products/chicken-hearts.png"
+        },
+        {
+          "id": "skewered-hearts",
+          "name": "לבבות משופדים",
+          "cutType": "על האש",
+          "description": "לבבות עוף נקיים ומשופדים, מוכנים לצלייה",
+          "price": "79 ₪ לק״ג",
+          "cuttingOptions": [
+            "שיפוד"
+          ],
+          "image": "/images/products/skewered-hearts.jpg"
+        },
+        {
+          "id": "chicken-necks",
+          "name": "גרונות",
+          "cutType": "למרק",
+          "description": "גרונות עוף עשירים בטעם",
+          "price": "15 ₪ לק״ג",
+          "cuttingOptions": [
+            "שלם"
+          ],
+          "image": "/images/products/chicken-necks.png"
         }
       ]
     },
@@ -180,66 +403,96 @@
       "image": "/images/categories/grilled.jpg",
       "products": [
         {
-          "id": "chicken-meatballs",
-          "name": "קציצות עוף עגולות",
-          "cutType": "מתכון מקורי",
-          "description": "קציצות עוף עגולות במתכון מקורי וסודי",
-          "suggestedUse": "תנור, פאן",
-          "cookingMethods": [
-            "oven",
-            "pan"
+          "id": "pargit-kebab",
+          "name": "קבב פרגית",
+          "cutType": "מוכן לצלייה",
+          "description": "קבב עסיסי מנתחי פרגית איכותיים",
+          "price": "78 ₪ לק״ג",
+          "cuttingOptions": [
+            "בצורת קבב"
           ],
-          "image": "/images/products/chicken-meatballs.png",
+          "image": "/images/products/pargit-kebab.jpg",
           "badge": "recommended"
         },
         {
-          "id": "beef-meatballs",
-          "name": "קציצות בקר עגולות",
-          "cutType": "מתכון מקורי",
-          "description": "קציצות בקר עגולות במתכון מקורי וסודי",
-          "suggestedUse": "תנור, פאן",
-          "cookingMethods": [
-            "oven",
-            "pan"
+          "id": "beef-kebab",
+          "name": "קבב בקר",
+          "cutType": "מוכן לצלייה",
+          "description": "100% בקר טרי, מתובל בעדינות",
+          "price": "90 ₪ לק״ג",
+          "cuttingOptions": [
+            "בצורת קבב"
           ],
-          "image": "/images/products/beef-meatballs.png",
+          "image": "/images/products/beef-kebab.jpg",
           "badge": "popular"
         },
         {
-          "id": "burger",
-          "name": "המבורגר בקר",
-          "cutType": "טחון טרי",
-          "description": "בשר בקר טרי טחון, ללא תוספות",
-          "suggestedUse": "גריל, פאן",
-          "cookingMethods": [
-            "grill",
-            "pan"
+          "id": "lamb-kebab",
+          "name": "קבב כבש",
+          "cutType": "מוכן לצלייה",
+          "description": "תערובת משובחת: 80% בקר ו-20% כבש",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "בצורת קבב"
           ],
-          "image": "/images/products/burger.png"
+          "image": "/images/products/lamb-kebab.jpg"
+        },
+        {
+          "id": "burger",
+          "name": "המבורגר",
+          "cutType": "מוכן לצלייה",
+          "description": "100% בקר טרי ללא תוספות",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "סטנדרט 170 גרם",
+            "גדלים שונים בהזמנה"
+          ],
+          "image": "/images/products/burger.png",
+          "badge": "popular"
         },
         {
           "id": "chicken-sausage",
-          "name": "נקניק עוף",
+          "name": "נקניקיות פרגית",
           "cutType": "נקניקיות",
-          "description": "נקניקיות עוף טריות במתכון מיוחד",
-          "suggestedUse": "גריל, פאן",
-          "cookingMethods": [
-            "grill",
-            "pan"
+          "description": "נקניקיות פרגית בעבודת יד",
+          "price": "80 ₪ לק״ג",
+          "cuttingOptions": [
+            "נקניקיות"
           ],
-          "image": "/images/products/chicken-sausage.png"
+          "image": "/images/products/chicken-sausage.jpg"
         },
         {
-          "id": "merguez",
-          "name": "מרגז",
-          "cutType": "נקניקיות",
-          "description": "נקניקיות מרגז מתובלות בתבלינים ים תיכוניים",
-          "suggestedUse": "גריל, פאן",
-          "cookingMethods": [
-            "grill",
-            "pan"
+          "id": "merguez-sausages",
+          "name": "נקניקיות מרגז",
+          "cutType": "נקניקיות חריפות",
+          "description": "נקניקיות חריפות בסגנון מרוקאי, עשויות מבשר בקר עם שומן כבש",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "נקניקיות"
           ],
-          "image": "/images/products/merkez.png"
+          "image": "/images/products/merguez-sausages.png"
+        },
+        {
+          "id": "chorizo-sausages",
+          "name": "נקניקיות צ׳וריסוס",
+          "cutType": "נקניקיות דרום אמריקאיות",
+          "description": "נקניקיות עסיסיות בתיבול דרום אמריקאי פיקנטי",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "נקניקיות"
+          ],
+          "image": "/images/products/chorizo-sausages.png"
+        },
+        {
+          "id": "asado-sausages",
+          "name": "נקניקיות אסאדו",
+          "cutType": "נקניקיות פרימיום",
+          "description": "נקניקיות עשירות בטעם העשויות מנתחי אסאדו מובחרים",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "נקניקיות"
+          ],
+          "image": "/images/products/asado-sausages.jpg"
         }
       ]
     }
@@ -252,13 +505,13 @@
     },
     "pan": {
       "id": "pan",
-      "name": "פאן",
+      "name": "מחבת",
       "icon": "🍳"
     },
     "oven": {
       "id": "oven",
       "name": "תנור",
-      "icon": "🔥"
+      "icon": "♨️"
     },
     "pot": {
       "id": "pot",

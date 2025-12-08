@@ -63,7 +63,7 @@ const homemadeProducts = category?.products || [];
         <div class="w-24 h-1 bg-primary-red mx-auto rounded-full"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-7xl mx-auto">
         {homemadeProducts.map((product) => (
           <ProductCard product={product} />
         ))}

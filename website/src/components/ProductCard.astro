@@ -27,43 +27,37 @@ const badges = productsData.badges;
         </svg>
       </div>
     )}
-    {product.badge && (
-      <div class={`absolute top-3 left-3 px-4 py-1.5 rounded-full text-white text-sm font-bold shadow-lg backdrop-blur-md ${
-        product.badge === 'premium' ? 'bg-gradient-to-r from-accent to-yellow-600' :
-        product.badge === 'popular' ? 'bg-gradient-to-r from-primary-red to-red-800' :
-        'bg-gradient-to-r from-green-600 to-green-800'
-      }`}>
-        {badges[product.badge].label}
-      </div>
-    )}
+
   </div>
 
   <!-- Product Info -->
   <div class="p-6">
-    <h3 class="text-2xl font-bold mb-2 text-white group-hover:text-accent transition-colors">{product.name}</h3>
+    <h3 class="text-xl font-bold mb-1 text-white group-hover:text-accent transition-colors">{product.name}</h3>
+    
+    <div class="flex justify-between items-start gap-2 mb-2">
+      <p class="text-primary font-bold text-lg">{product.price}</p>
+    </div>
+
     {product.cutType && (
-      <p class="text-sm mb-3 text-accent font-semibold tracking-wider uppercase">{product.cutType}</p>
+      <p class="text-sm mb-2 text-accent/80 font-medium tracking-wide">{product.cutType}</p>
     )}
-    <p class="mb-4 text-gray-400 leading-relaxed text-sm">{product.description}</p>
+    
+    <p class="mb-4 text-gray-400 leading-relaxed text-sm line-clamp-2">{product.description}</p>
+
+    {product.cuttingOptions && product.cuttingOptions.length > 1 && (
+      <div class="mt-auto pt-3 border-t border-white/5">
+        <p class="text-xs text-gray-500 mb-2">אפשרויות חיתוך:</p>
+        <div class="flex flex-wrap gap-2">
+          {product.cuttingOptions.map((option: any) => (
+            <span class="text-xs text-gray-300 bg-white/5 px-2 py-1 rounded border border-white/5">{option}</span>
+          ))}
+        </div>
+      </div>
+    )}
 
     <!-- Cooking Methods -->
-    {product.cookingMethods && product.cookingMethods.length > 0 && (
-      <div class="flex flex-wrap gap-2 mb-4">
-        {product.cookingMethods.map((method: string) => (
-          <span class="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-white/5 text-gray-300 border border-white/5">
-            <span>{cookingMethods[method].icon}</span>
-            <span>{cookingMethods[method].name}</span>
-          </span>
-        ))}
-      </div>
-    )}
 
-    {product.suggestedUse && (
-      <div class="pt-3 border-t border-white/10 mt-auto">
-        <p class="text-sm text-gray-500">
-          <strong class="text-gray-300">מומלץ ל:</strong> {product.suggestedUse}
-        </p>
-      </div>
-    )}
+
+
   </div>
 </div>
