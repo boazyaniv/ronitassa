@@ -245,6 +245,28 @@
             "גוש שלם"
           ],
           "image": "/images/products/lamb-neck.png"
+        },
+        {
+          "id": "ground-mix",
+          "name": "טחון בקר וטלה",
+          "cutType": "טחון",
+          "description": "תערובת עסיסית של בקר וטלה",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "טחון"
+          ],
+          "image": "/images/products/ground-mix.png"
+        },
+        {
+          "id": "lamb-kebab",
+          "name": "קבב כבש",
+          "cutType": "מוכן לצלייה",
+          "description": "תערובת משובחת: 80% בקר ו-20% כבש",
+          "price": "95 ₪ לק״ג",
+          "cuttingOptions": [
+            "בצורת קבב"
+          ],
+          "image": "/images/products/lamb-kebab.jpg"
         }
       ]
     },
@@ -277,14 +299,24 @@
           "name": "פרגית",
           "cutType": "עסיסי",
           "description": "ירך עוף ללא עצם, עסיסית וטעימה",
-          "price": "80 ₪ (רגיל) / 84 ₪ (משופד) לק״ג",
+          "price": "80 ₪ לק״ג",
           "cuttingOptions": [
             "סטייק",
             "קוביות",
-            "רצועות",
-            "משופד"
+            "רצועות"
           ],
           "image": "/images/products/spring-chicken.png"
+        },
+        {
+          "id": "spring-chicken-skewered",
+          "name": "פרגית משופד",
+          "cutType": "מוכן לצלייה",
+          "description": "ירך עוף ללא עצם משופדת, מוכנה לגריל",
+          "price": "84 ₪ לק״ג",
+          "cuttingOptions": [
+            "שיפוד"
+          ],
+          "image": "/images/products/spring-chicken-skewered.png"
         },
         {
           "id": "chicken-legs",
