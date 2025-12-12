@@ -49,7 +49,7 @@
             "גוש שלם",
             "פרוס דק"
           ],
-          "image": "/images/products/sirloin.png"
+          "image": "/images/products/sirloin.jpg"
         },
         {
           "id": "asado",
@@ -120,7 +120,7 @@
           "cuttingOptions": [
             "פרוס עם עצם"
           ],
-          "image": "/images/products/ossobuco.jpg"
+          "image": "/images/products/beef-ossobuco.png"
         },
         {
           "id": "chuck-eye-roll",
@@ -200,7 +200,7 @@
           "name": "דנבר",
           "cutType": "נתח פרימיום",
           "description": "נתח דנבר - נתח רך ועסיסי מאזור הכתף",
-          "price": "[מחיר יתעדכן]",
+          "price": "110 ₪ לק״ג",
           "cuttingOptions": [
             "סטייקים",
             "גוש שלם"
@@ -318,7 +318,7 @@
         },
         {
           "id": "spring-chicken-skewered",
-          "name": "פרגית משופד",
+          "name": "שיפודי פרגית",
           "cutType": "מוכן לצלייה",
           "description": "ירך עוף ללא עצם משופדת, מוכנה לגריל",
           "price": "84 ₪ לק״ג",
@@ -448,7 +448,7 @@
           "name": "פרגית עם עצם",
           "cutType": "עסיסי",
           "description": "ירך עוף עם עצם, עסיסית במיוחד",
-          "price": "[מחיר יתעדכן]",
+          "price": "65 ₪ לק״ג",
           "cuttingOptions": [
             "עם עצם"
           ],
@@ -470,7 +470,7 @@
           "name": "שווארמה הודו נקבה",
           "cutType": "לשווארמה",
           "description": "בשר הודו נקבה לשווארמה",
-          "price": "[מחיר יתעדכן]",
+          "price": "82 ₪ לק״ג",
           "cuttingOptions": [
             "פרוס"
           ],
