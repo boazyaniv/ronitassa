@@ -21,7 +21,7 @@
             "פרוס דק",
             "משופד"
           ],
-          "image": "/images/products/ribeye.png",
+          "image": "/images/products/ribeye/ribeye.png",
           "badge": "recommended"
         },
         {
@@ -35,7 +35,7 @@
             "מדליונים",
             "פרוס לקרפצ'יו"
           ],
-          "image": "/images/products/tenderloin.png",
+          "image": "/images/products/tenderloin/tenderloin.png",
           "badge": "popular"
         },
         {
@@ -49,7 +49,7 @@
             "גוש שלם",
             "פרוס דק"
           ],
-          "image": "/images/products/sirloin.jpg"
+          "image": "/images/products/sirloin/sirloin.jpg"
         },
         {
           "id": "asado",
@@ -61,7 +61,7 @@
             "עם עצם",
             "ללא עצם"
           ],
-          "image": "/images/products/asado.png"
+          "image": "/images/products/asado/asado.png"
         },
         {
           "id": "chuck-roast",
@@ -75,7 +75,7 @@
             "קוביות",
             "רצועות"
           ],
-          "image": "/images/products/chuck-roast.png"
+          "image": "/images/products/chuck-roast/chuck-roast.png"
         },
         {
           "id": "picanha",
@@ -87,7 +87,7 @@
             "גוש שלם",
             "פרוס לסטייקים"
           ],
-          "image": "/images/products/picanha.png"
+          "image": "/images/products/picanha/picanha.png"
         },
         {
           "id": "ground-beef",
@@ -98,7 +98,7 @@
           "cuttingOptions": [
             "טחון"
           ],
-          "image": "/images/products/ground-beef.png"
+          "image": "/images/products/ground-beef/ground-beef.png"
         },
         {
           "id": "ground-mix",
@@ -109,7 +109,7 @@
           "cuttingOptions": [
             "טחון"
           ],
-          "image": "/images/products/ground-mix.png"
+          "image": "/images/products/ground-mix/ground-mix.png"
         },
         {
           "id": "ossobuco",
@@ -120,7 +120,7 @@
           "cuttingOptions": [
             "פרוס עם עצם"
           ],
-          "image": "/images/products/beef-ossobuco.png"
+          "image": "/images/products/ossobuco/beef-ossobuco.png"
         },
         {
           "id": "chuck-eye-roll",
@@ -132,7 +132,7 @@
             "קוביות",
             "גוש שלם"
           ],
-          "image": "/images/products/chuck-eye-roll.jpg"
+          "image": "/images/products/chuck-eye-roll/chuck-eye-roll.jpg"
         },
         {
           "id": "neck",
@@ -145,7 +145,7 @@
             "טחון",
             "גוש שלם"
           ],
-          "image": "/images/products/beef-neck.png"
+          "image": "/images/products/neck/beef-neck.png"
         },
         {
           "id": "central-shoulder",
@@ -158,7 +158,7 @@
             "קוביות",
             "גוש שלם"
           ],
-          "image": "/images/products/central-shoulder.jpg"
+          "image": "/images/products/central-shoulder/central-shoulder.jpg"
         },
         {
           "id": "false-fillet",
@@ -170,7 +170,7 @@
             "פרוס",
             "גוש שלם"
           ],
-          "image": "/images/products/false-fillet.png"
+          "image": "/images/products/false-fillet/false-fillet.png"
         },
         {
           "id": "shank",
@@ -182,7 +182,7 @@
             "קוביות",
             "גוש שלם"
           ],
-          "image": "/images/products/beef-shank.png"
+          "image": "/images/products/shank/beef-shank.png"
         },
         {
           "id": "viennese-schnitzel",
@@ -193,7 +193,7 @@
           "cuttingOptions": [
             "שניצל"
           ],
-          "image": "/images/products/viennese-schnitzel.jpg"
+          "image": "/images/products/viennese-schnitzel/viennese-schnitzel.jpg"
         },
         {
           "id": "denver",
@@ -205,7 +205,7 @@
             "סטייקים",
             "גוש שלם"
           ],
-          "image": "/images/products/denver.png"
+          "image": "/images/products/denver/denver.png"
         }
       ]
     },
@@ -228,7 +228,7 @@
             "צלעות בודדות",
             "גוש שלם"
           ],
-          "image": "/images/products/lamb-ribs.png",
+          "image": "/images/products/lamb-ribs/lamb-ribs.png",
           "badge": "recommended"
         },
         {
@@ -241,7 +241,7 @@
             "גוש שלם",
             "פרוס"
           ],
-          "image": "/images/products/lamb-shoulder.jpg"
+          "image": "/images/products/lamb-shoulder/lamb-shoulder.jpg"
         },
         {
           "id": "lamb-neck",
@@ -253,7 +253,7 @@
             "פרוס עם עצם",
             "גוש שלם"
           ],
-          "image": "/images/products/lamb-neck.png"
+          "image": "/images/products/lamb-neck/lamb-neck.png"
         },
         {
           "id": "ground-mix",
@@ -264,7 +264,7 @@
           "cuttingOptions": [
             "טחון"
           ],
-          "image": "/images/products/ground-mix.png"
+          "image": "/images/products/ground-mix/ground-mix.png"
         },
         {
           "id": "lamb-kebab",
@@ -275,7 +275,7 @@
           "cuttingOptions": [
             "בצורת קבב"
           ],
-          "image": "/images/products/lamb-kebab.jpg"
+          "image": "/images/products/lamb-kebab/lamb-kebab.jpg"
         }
       ]
     },
@@ -301,7 +301,7 @@
             "קוביות",
             "רצועות"
           ],
-          "image": "/images/products/chicken-breast.png",
+          "image": "/images/products/chicken-breast/chicken-breast.png",
           "badge": "popular"
         },
         {
@@ -315,7 +315,7 @@
             "קוביות",
             "רצועות"
           ],
-          "image": "/images/products/spring-chicken.png"
+          "image": "/images/products/spring-chicken/spring-chicken.png"
         },
         {
           "id": "spring-chicken-skewered",
@@ -326,7 +326,7 @@
           "cuttingOptions": [
             "שיפוד"
           ],
-          "image": "/images/products/spring-chicken-skewered.png"
+          "image": "/images/products/spring-chicken-skewered/spring-chicken-skewered.png"
         },
         {
           "id": "chicken-legs",
@@ -338,7 +338,7 @@
             "שלם",
             "חצוי"
           ],
-          "image": "/images/products/chicken-legs.png"
+          "image": "/images/products/chicken-legs/chicken-legs.png"
         },
         {
           "id": "chicken-drumsticks",
@@ -349,7 +349,7 @@
           "cuttingOptions": [
             "שלם"
           ],
-          "image": "/images/products/chicken-drumsticks.jpg"
+          "image": "/images/products/chicken-drumsticks/chicken-drumsticks.jpg"
         },
         {
           "id": "chicken-thighs",
@@ -360,7 +360,7 @@
           "cuttingOptions": [
             "שלם"
           ],
-          "image": "/images/products/chicken-thighs.png"
+          "image": "/images/products/chicken-thighs/chicken-thighs.png"
         },
         {
           "id": "whole-chicken",
@@ -373,7 +373,7 @@
             "מפורק",
             "חתוך ל-4/8"
           ],
-          "image": "/images/products/whole-chicken.png"
+          "image": "/images/products/whole-chicken/whole-chicken.png"
         },
         {
           "id": "chicken-wings",
@@ -385,7 +385,7 @@
             "שלמות",
             "חצויות"
           ],
-          "image": "/images/products/chicken-wings.png"
+          "image": "/images/products/chicken-wings/chicken-wings.png"
         },
         {
           "id": "chicken-liver",
@@ -397,7 +397,7 @@
             "שלם",
             "צלוי"
           ],
-          "image": "/images/products/chicken-liver.png"
+          "image": "/images/products/chicken-liver/chicken-liver.png"
         },
         {
           "id": "chicken-hearts",
@@ -409,7 +409,7 @@
             "שלם",
             "נקי"
           ],
-          "image": "/images/products/chicken-hearts.png"
+          "image": "/images/products/chicken-hearts/chicken-hearts.png"
         },
         {
           "id": "skewered-hearts",
@@ -420,7 +420,7 @@
           "cuttingOptions": [
             "שיפוד"
           ],
-          "image": "/images/products/skewered-hearts.jpg"
+          "image": "/images/products/skewered-hearts/skewered-hearts.jpg"
         },
         {
           "id": "chicken-necks",
@@ -431,7 +431,7 @@
           "cuttingOptions": [
             "שלם"
           ],
-          "image": "/images/products/chicken-necks.png"
+          "image": "/images/products/chicken-necks/chicken-necks.png"
         },
         {
           "id": "clean-hearts",
@@ -442,7 +442,7 @@
           "cuttingOptions": [
             "נקי"
           ],
-          "image": "/images/products/clean-hearts.png"
+          "image": "/images/products/clean-hearts/clean-hearts.png"
         },
         {
           "id": "chicken-with-bone",
@@ -453,7 +453,7 @@
           "cuttingOptions": [
             "עם עצם"
           ],
-          "image": "/images/products/chicken-with-bone.png"
+          "image": "/images/products/chicken-with-bone/chicken-with-bone.png"
         },
         {
           "id": "turkey-neck",
@@ -464,7 +464,7 @@
           "cuttingOptions": [
             "שלם"
           ],
-          "image": "/images/products/turkey-neck.jpg"
+          "image": "/images/products/turkey-neck/turkey-neck.jpg"
         },
         {
           "id": "female-shawarma",
@@ -475,7 +475,7 @@
           "cuttingOptions": [
             "פרוס"
           ],
-          "image": "/images/products/female-shawarma.png"
+          "image": "/images/products/female-shawarma/female-shawarma.png"
         }
       ]
     },
@@ -497,7 +497,7 @@
           "cuttingOptions": [
             "בצורת קבב"
           ],
-          "image": "/images/products/pargit-kebab.jpg",
+          "image": "/images/products/pargit-kebab/pargit-kebab.jpg",
           "badge": "recommended"
         },
         {
@@ -509,7 +509,7 @@
           "cuttingOptions": [
             "בצורת קבב"
           ],
-          "image": "/images/products/beef-kebab.jpg",
+          "image": "/images/products/beef-kebab/beef-kebab.jpg",
           "badge": "popular"
         },
         {
@@ -521,7 +521,7 @@
           "cuttingOptions": [
             "בצורת קבב"
           ],
-          "image": "/images/products/lamb-kebab.jpg"
+          "image": "/images/products/lamb-kebab/lamb-kebab.jpg"
         },
         {
           "id": "burger",
@@ -533,7 +533,7 @@
             "סטנדרט 170 גרם",
             "גדלים שונים בהזמנה"
           ],
-          "image": "/images/products/burger.png",
+          "image": "/images/products/burger/burger.png",
           "badge": "popular"
         },
         {
@@ -545,7 +545,7 @@
           "cuttingOptions": [
             "נקניקיות"
           ],
-          "image": "/images/products/chicken-sausage.jpg"
+          "image": "/images/products/chicken-sausage/chicken-sausage.jpg"
         },
         {
           "id": "merguez-sausages",
@@ -556,7 +556,7 @@
           "cuttingOptions": [
             "נקניקיות"
           ],
-          "image": "/images/products/merguez-sausages.png"
+          "image": "/images/products/merguez-sausages/merguez-sausages.png"
         },
         {
           "id": "chorizo-sausages",
@@ -567,7 +567,7 @@
           "cuttingOptions": [
             "נקניקיות"
           ],
-          "image": "/images/products/chorizo-sausages.png"
+          "image": "/images/products/chorizo-sausages/chorizo-sausages.png"
         },
         {
           "id": "asado-sausages",
@@ -578,7 +578,7 @@
           "cuttingOptions": [
             "נקניקיות"
           ],
-          "image": "/images/products/asado-sausages.jpg"
+          "image": "/images/products/asado-sausages/asado-sausages.jpg"
         }
       ]
     }
