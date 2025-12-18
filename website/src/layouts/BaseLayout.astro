@@ -14,6 +14,71 @@ const {
 } = Astro.props;
 
 const whatsappNumber = `972${siteInfo.contact.whatsapp.replace(/^0/, '')}`;
+
+// Structured Data Generation
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbSchema = segments.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": segments.map((segment, index, array) => {
+    const labels: Record<string, string> = {
+      'about': 'אודות',
+      'contact': 'צור קשר',
+      'products': 'מוצרים',
+      'beef': 'בקר',
+      'lamb': 'כבש',
+      'chicken': 'עוף',
+      'homemade': 'תוצרת בית',
+      'accessibility': 'נגישות'
+    };
+    return {
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": labels[segment] || segment,
+      "item": new URL('/' + array.slice(0, index + 1).join('/'), siteInfo.seo.siteUrl)
+    };
+  })
+} : null;
+
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ButcherShop",
+  "name": siteInfo.name,
+  "image": new URL('/images/hero-bg.png', siteInfo.seo.siteUrl),
+  "@id": siteInfo.seo.siteUrl,
+  "url": siteInfo.seo.siteUrl,
+  "telephone": siteInfo.contact.phone,
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": siteInfo.address.street,
+    "addressLocality": siteInfo.address.city,
+    "addressCountry": "IL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 32.051512,
+    "longitude": 34.819383
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "07:30",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "07:30",
+      "closes": "13:30"
+    }
+  ],
+  "sameAs": [
+    siteInfo.contact.facebook,
+    siteInfo.contact.instagram
+  ]
+};
 ---
 
 <!DOCTYPE html>
@@ -56,57 +121,12 @@ const whatsappNumber = `972${siteInfo.contact.whatsapp.replace(/^0/, '')}`;
     <meta property="twitter:image" content={new URL('/images/hero-bg.png', siteInfo.seo.siteUrl)} />
 
     <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json" is:inline set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ButcherShop",
-      "name": siteInfo.name,
-      "image": new URL('/images/hero-bg.png', siteInfo.seo.siteUrl),
-      "@id": siteInfo.seo.siteUrl,
-      "url": siteInfo.seo.siteUrl,
-      "telephone": siteInfo.contact.phone,
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": siteInfo.address.street,
-        "addressLocality": siteInfo.address.city,
-        "addressCountry": "IL"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 32.051512,
-        "longitude": 34.819383
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-          "opens": "07:30",
-          "closes": "18:30"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Friday",
-          "opens": "07:30",
-          "closes": "13:30"
-        }
-      ],
-      "sameAs": [
-        siteInfo.contact.facebook,
-        siteInfo.contact.instagram
-      ]
-    })} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(businessSchema)} />
     
     <!-- Breadcrumb Structured Data -->
-    <script type="application/ld+json" is:inline set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": Astro.url.pathname.split('/').filter(Boolean).map((segment, index, array) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "name": segment, // Note: In a perfect world, this would match translated labels
-        "item": new URL('/' + array.slice(0, index + 1).join('/'), siteInfo.seo.siteUrl)
-      }))
-    })} />
+    {breadcrumbSchema && (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
   </head>
   <body class="flex flex-col min-h-screen">
     <!-- Skip to main content for accessibility -->
