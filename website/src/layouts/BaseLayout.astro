@@ -24,6 +24,8 @@ const whatsappNumber = `972${siteInfo.contact.whatsapp.replace(/^0/, '')}`;
     <title>{title}</title>
     <meta name="google-site-verification" content="k5P0kIDf3pKhRimqfnvpvO2wue-5fqONtJKrAANRVCg" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href={new URL(Astro.url.pathname, siteInfo.seo.siteUrl).href} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -40,13 +42,58 @@ const whatsappNumber = `972${siteInfo.contact.whatsapp.replace(/^0/, '')}`;
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/images/hero-bg.png', siteInfo.seo.siteUrl)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL('/images/hero-bg.png', siteInfo.seo.siteUrl)} />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ButcherShop",
+      "name": siteInfo.name,
+      "image": new URL('/images/hero-bg.png', siteInfo.seo.siteUrl),
+      "@id": siteInfo.seo.siteUrl,
+      "url": siteInfo.seo.siteUrl,
+      "telephone": siteInfo.contact.phone,
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": siteInfo.address.street,
+        "addressLocality": siteInfo.address.city,
+        "addressCountry": "IL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 32.051512,
+        "longitude": 34.819383
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "07:30",
+          "closes": "18:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "07:30",
+          "closes": "13:30"
+        }
+      ],
+      "sameAs": [
+        siteInfo.contact.facebook,
+        siteInfo.contact.instagram
+      ]
+    })} />
   </head>
   <body class="flex flex-col min-h-screen">
     <!-- Skip to main content for accessibility -->
