@@ -1,4 +1,6 @@
 // @ts-check
+// Restart trigger
+
 import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
