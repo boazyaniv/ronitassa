@@ -35,11 +35,11 @@ const categories = [
         <span class="block text-4xl md:text-6xl mt-2 font-light">קצביית בוטיק</span>
       </h1>
       <p class="text-lg md:text-2xl mb-10 text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
-        מסורת של איכות, טריות וטעם בלתי נשכח. הבשרים הטובים ביותר, ישר מהקצב אליכם לצלחת.
+        קצביית בוטיק משפחתית ברמת גן. בשר משובח, טריות יומיומית ושירות אישי לתושבי רמת חן, רמת שקמה והסביבה.
       </p>
       <div class="flex flex-col md:flex-row gap-6 justify-center">
-        <a href="#products" class="btn btn-primary text-xl py-4 px-10 shadow-xl shadow-red-900/20 hover:shadow-red-900/40 transform hover:-translate-y-1 transition-all duration-300">
-          לכל המוצרים
+        <a href="/products" class="btn btn-primary text-xl py-4 px-10 shadow-xl shadow-red-900/20 hover:shadow-red-900/40 transform hover:-translate-y-1 transition-all duration-300">
+          לכל המחלקות
         </a>
         <a href="#contact" class="btn bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 text-xl py-4 px-10 shadow-xl transform hover:-translate-y-1 transition-all duration-300">
           צור קשר
@@ -100,25 +100,48 @@ const categories = [
         </div>
         <div class="lg:w-1/2 text-right">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            מסורת של <span class="text-primary-red">בשר משובח</span>
+            מסורת של <span class="text-primary-red">בשר משובח</span> ברמת גן
           </h2>
           <p class="text-xl text-gray-600 mb-6 leading-relaxed">
             מאז 1971, אנו ברוני טסה גאים להביא ללקוחותינו את הבשר האיכותי ביותר. 
-            הסוד שלנו הוא פשוט: אהבה למקצוע, הקפדה על חומרי גלם מעולים, ושירות אישי לכל לקוח.
+            ממוקמים ברחוב שלם 12, במיקום נגיש ונוח לתושבי רמת חן, רמת שקמה והמבקרים בפארק הלאומי רמת גן.
           </p>
           <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-            אצלנו תמצאו נתחים מיושנים בקפידה, עופות טריים יום יום, ומגוון מוצרי בוטיק בייצור עצמי, 
-            בנוסף למוצרי מכולת ודגים קפואים - שיהפכו כל ארוחה לחגיגה.
+            אצלנו תמצאו נתחי פרימיום מיושנים בקפידה, עוף טרי יום יום, ומארזי בשר מושלמים למנגל בפארק. 
+            אנחנו הכתובת שלכם לאטליז איכותי, נקי ומשפחתי באזור.
           </p>
           <a href="/about" class="btn bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-3 transition-all duration-300">
-            קרא עוד עלינו
+            קראו עוד עלינו
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Reviews Section -->
+  <!-- National Park BBQ Section -->
+  <section class="py-24 bg-neutral-900 text-white relative overflow-hidden border-y border-white/5">
+    <div class="absolute inset-0 bg-gradient-to-bl from-primary-red/10 via-transparent to-transparent"></div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">
+          מתכננים על האש ב<span class="text-primary">פארק הלאומי</span>?
+        </h2>
+        <p class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed font-light">
+          הקצבייה שלנו ממוקמת דקה נסיעה מהפארק הלאומי רמת גן. תעצרו אצלנו בדרך (רחוב שלם 12) ותצטיידו בבשר טרי, קבב ביתי, המבורגרים ושיפודים מוכנים לרשת. 
+          <br class="hidden md:block" />
+          <span class="text-white font-medium italic">האיכות של רוני טסה - החגיגה שלכם בפארק.</span>
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <a href="/products/homemade" class="btn btn-primary text-xl py-4 px-10 shadow-xl shadow-red-900/40 transform hover:-translate-y-1 transition-all">
+            למוצרי המנגל שלנו
+          </a>
+          <a href="https://maps.app.goo.gl/kHf6CiTJqFxeuHA38" target="_blank" rel="noopener" class="btn bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 text-xl py-4 px-10 shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+            ניווט לקצבייה
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
   <ReviewsCarousel />
 
   <!-- CTA Section -->
