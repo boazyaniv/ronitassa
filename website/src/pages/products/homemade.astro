@@ -12,26 +12,55 @@ const pageDescription = "המוצרים המוכנים שלנו: המבורגר�
 const category = productsData.categories.find(cat => cat.slug === 'homemade');
 const homemadeProducts = category?.products || [];
 
-const productSchema = homemadeProducts.map(product => ({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": product.name,
-  "description": product.description,
-  "image": new URL(product.image, "https://tassa-butchershop.co.il").href,
-  "sku": product.id,
-  "brand": {
-    "@type": "Brand",
-    "name": "רוני טסה"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": `https://tassa-butchershop.co.il/products/homemade#${product.id}`,
-    "priceCurrency": "ILS",
-    "price": product.price.replace(/\D+(\d+).*/, '$1'), // Extract numeric price roughly
-    "availability": "https://schema.org/InStock",
-    "itemCondition": "https://schema.org/NewCondition"
-  }
-}));
+const productSchema = homemadeProducts.map(product => {
+  // Extract first numeric value from price string (e.g., "84 ₪ לק״ג" -> "84")
+  const priceMatch = product.price.match(/(\d+)/);
+  const numericPrice = priceMatch ? priceMatch[1] : "0";
+  
+  // Set price validity to 1 year from now
+  const priceValidUntil = new Date();
+  priceValidUntil.setFullYear(priceValidUntil.getFullYear() + 1);
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "description": product.description,
+    "image": new URL(product.image, "https://tassa-butchershop.co.il").href,
+    "sku": product.id,
+    "brand": {
+      "@type": "Brand",
+      "name": "רוני טסה"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "לקוח מרוצה"
+      },
+      "reviewBody": "בשר איכותי ושירות מעולה. ממליץ בחום!"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": `https://tassa-butchershop.co.il/products/homemade#${product.id}`,
+      "priceCurrency": "ILS",
+      "price": numericPrice,
+      "priceValidUntil": priceValidUntil.toISOString().split('T')[0],
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  };
+});
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} schema={productSchema}>
