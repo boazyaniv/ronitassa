@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import productsData from '../../data/products.json';
+import { Image } from 'astro:assets';
+import chickenCategoryImg from '../../assets/images/chicken-category.png';
 
 const pageTitle = "בשר עוף טרי מדי יום | רוני טסה";
 const pageDescription = "עוף טרי ואיכותי - חזה, שוקיים, כנפיים ועוף שלם. קבלת משלוחים טריים מדי יום, איכות מובטחת.";
@@ -14,10 +16,12 @@ const chickenProducts = category?.products || [];
   <!-- Hero Section -->
   <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img 
-        src="/images/chicken-category.png" 
+      <Image 
+        src={chickenCategoryImg} 
         alt="בשר עוף טרי ואיכותי" 
         class="w-full h-full object-cover object-center"
+        quality="high"
+        loading="eager"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-neutral-950"></div>
     </div>

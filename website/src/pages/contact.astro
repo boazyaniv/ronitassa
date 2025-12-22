@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import siteInfo from '../data/site-info.json';
+import { Image } from 'astro:assets';
+import ribsImg from '../assets/images/hero/ribs.jpg';
 
 const pageTitle = "צור קשר | רוני טסה - קצביה ברמת גן";
 const pageDescription = "צרו קשר עם רוני טסה - טלפון, WhatsApp, או בואו לבקר אותנו ברחוב שלם 12 ברמת גן. נשמח לעמוד לשירותכם.";
@@ -31,8 +33,8 @@ const whatsappNumber = siteInfo.contact.whatsapp.replace(/^0/, '972');
         <div class="w-full md:w-5/12">
           <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 group max-w-md mx-auto md:mr-auto md:ml-0">
             <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
-            <img 
-              src="/images/hero/ribs.jpg" 
+            <Image 
+              src={ribsImg} 
               alt="נתחי בשר מובחרים" 
               class="w-full h-auto -mt-12"
             />

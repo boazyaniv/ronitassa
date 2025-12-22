@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import productsData from '../../data/products.json';
+import { Image } from 'astro:assets';
+import beefCategoryImg from '../../assets/images/beef-category.png';
 
 const pageTitle = "בשר בקר איכותי מיושן במקום | רוני טסה";
 const pageDescription = "נתחי בשר בקר מובחרים, מיושנים במקום בתנאים מבוקרים. אנטריקוט, פילה מניון, צלי עגל ועוד. מסורת של מעל 50 שנה.";
@@ -14,10 +16,12 @@ const beefProducts = category?.products || [];
   <!-- Hero Section -->
   <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img
-        src="/images/beef-category.png"
+      <Image
+        src={beefCategoryImg}
         alt="בשר בקר מיושן איכותי"
         class="w-full h-full object-cover"
+        quality="high"
+        loading="eager"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-neutral-950"></div>
     </div>

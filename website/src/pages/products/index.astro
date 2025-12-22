@@ -2,15 +2,21 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import productsData from '../../data/products.json';
 import siteInfo from '../../data/site-info.json';
+import { Image } from 'astro:assets';
+import heroBgImg from '../../assets/images/hero-bg.png';
+import beefCategoryImg from '../../assets/images/beef-category.png';
+import lambCategoryImg from '../../assets/images/lamb-category.png';
+import chickenCategoryImg from '../../assets/images/chicken-category.png';
+import homemadeCategoryImg from '../../assets/images/homemade-category.png';
 
 const pageTitle = "מחלקות המוצרים | רוני טסה - קצביית בוטיק";
 const pageDescription = "גלו את מגוון מחלקות הבשר המשובח שלנו: בקר מיושן, טלה משובח, עוף טרי ומוצרים בייצור ביתי. איכות ללא פשרות מאז 1971.";
 
 const categories = [
-  { id: 'beef', title: 'בקר טרי', image: '/images/beef-category.png', link: '/products/beef', description: 'נתחי בקר מובחרים, מיושנים במקום בתנאים מבוקרים.' },
-  { id: 'lamb', title: 'טלה משובח', image: '/images/lamb-category.png', link: '/products/lamb', description: 'נתחי כבש וטלה טריים המצטיינים ברכות ובעסיסיות יוצאת דופן.' },
-  { id: 'chicken', title: 'עוף טרי', image: '/images/chicken-category.png', link: '/products/chicken', description: 'עוף טרי המגיע אלינו מדי בוקר, נקי ומוכן לבישול.' },
-  { id: 'homemade', title: 'תוצרת בית', image: '/images/homemade-category.png', link: '/products/homemade', description: 'מגוון מוצרי בשר איכותיים בהכנה ביתית, מתובלים ומוכנים לצלייה.' },
+  { id: 'beef', title: 'בקר טרי', image: beefCategoryImg, link: '/products/beef', description: 'נתחי בקר מובחרים, מיושנים במקום בתנאים מבוקרים.' },
+  { id: 'lamb', title: 'טלה משובח', image: lambCategoryImg, link: '/products/lamb', description: 'נתחי כבש וטלה טריים המצטיינים ברכות ובעסיסיות יוצאת דופן.' },
+  { id: 'chicken', title: 'עוף טרי', image: chickenCategoryImg, link: '/products/chicken', description: 'עוף טרי המגיע אלינו מדי בוקר, נקי ומוכן לבישול.' },
+  { id: 'homemade', title: 'תוצרת בית', image: homemadeCategoryImg, link: '/products/homemade', description: 'מגוון מוצרי בשר איכותיים בהכנה ביתית, מתובלים ומוכנים לצלייה.' },
 ];
 ---
 
@@ -18,10 +24,12 @@ const categories = [
   <!-- Hero Section -->
   <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img 
-        src="/images/hero-bg.png" 
+      <Image 
+        src={heroBgImg} 
         alt="מוצרי בשר מובחרים" 
         class="w-full h-full object-cover object-center"
+        quality="high"
+        loading="eager"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-neutral-950"></div>
     </div>
@@ -48,10 +56,11 @@ const categories = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {categories.map((category) => (
           <a href={category.link} class="group relative h-[450px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block border border-white/5 hover:border-primary-red/30 transition-colors duration-500">
-            <img 
+            <Image 
               src={category.image} 
               alt={category.title} 
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              width={600}
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300"></div>
             <div class="absolute bottom-0 left-0 right-0 p-8 text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">

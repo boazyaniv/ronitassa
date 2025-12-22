@@ -2,6 +2,10 @@
 import '../styles/global.css';
 import siteInfo from '../data/site-info.json';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
+import heroBgImg from '../assets/images/hero-bg.png';
+import kosherBadgeImg from '../assets/images/kosher-badge.png';
 
 interface Props {
   title?: string;
@@ -14,6 +18,9 @@ const {
 } = Astro.props;
 
 const whatsappNumber = `972${siteInfo.contact.whatsapp.replace(/^0/, '')}`;
+
+// Optimize images for SEO
+const heroBgOptimized = await getImage({ src: heroBgImg, format: 'jpg' });
 
 // Structured Data Generation
 const segments = Astro.url.pathname.split('/').filter(Boolean);
@@ -44,7 +51,7 @@ const businessSchema = {
   "@context": "https://schema.org",
   "@type": "ButcherShop",
   "name": siteInfo.name,
-  "image": new URL('/images/hero-bg.png', siteInfo.seo.siteUrl),
+  "image": new URL(heroBgOptimized.src, siteInfo.seo.siteUrl),
   "@id": siteInfo.seo.siteUrl,
   "url": siteInfo.seo.siteUrl,
   "telephone": siteInfo.contact.phone,
@@ -123,14 +130,14 @@ const businessSchema = {
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/images/hero-bg.png', siteInfo.seo.siteUrl)} />
+    <meta property="og:image" content={new URL(heroBgOptimized.src, siteInfo.seo.siteUrl)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/images/hero-bg.png', siteInfo.seo.siteUrl)} />
+    <meta property="twitter:image" content={new URL(heroBgOptimized.src, siteInfo.seo.siteUrl)} />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(businessSchema)} />
@@ -195,7 +202,7 @@ const businessSchema = {
           <div class="flex items-center gap-4">
             <!-- Kosher Badge -->
             <div class="block">
-              <img src="/images/kosher-badge.png" alt="כשר" class="h-10 md:h-16 w-auto opacity-90 hover:opacity-100 transition-opacity" />
+              <Image src={kosherBadgeImg} alt="כשר" class="h-10 md:h-16 w-auto opacity-90 hover:opacity-100 transition-opacity" />
             </div>
 
             <!-- WhatsApp Button -->

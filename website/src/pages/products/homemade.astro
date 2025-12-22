@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import productsData from '../../data/products.json';
+import { Image } from 'astro:assets';
+import homemadeCategoryImg from '../../assets/images/homemade-category.png';
 
 const pageTitle = "מוצרי בית מוכנים לבישול | רוני טסה";
 const pageDescription = "מוצרי בית טעימים והכנה קלה - המבורגרים, קבב, שווארמה ועוד. הכל מוכן, רק להכניס לתנור או למחבת.";
@@ -14,10 +16,12 @@ const homemadeProducts = category?.products || [];
   <!-- Hero Section -->
   <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img 
-        src="/images/homemade-category.png" 
+      <Image 
+        src={homemadeCategoryImg} 
         alt="מוצרי בית מוכנים לבישול" 
         class="w-full h-full object-cover object-center"
+        quality="high"
+        loading="eager"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-neutral-950"></div>
     </div>

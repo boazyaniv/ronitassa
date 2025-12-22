@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import asadoImg from '../../assets/images/products/asado/asado.png';
 
 const pageTitle = "מתכון לתבשיל אסאדו חגיגי בתנור | רוני טסה";
 const pageDescription = "מתכון מנצח לאסאדו (צלעות בקר) בבישול ארוך בתנור. בשר שנופל מהעצם, ברוטב עשיר וירקות שורש. המנה המושלמת לשבת וחג.";
@@ -9,10 +11,12 @@ const pageDescription = "מתכון מנצח לאסאדו (צלעות בקר) ב
   <!-- Hero Section -->
   <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img 
-        src="/images/products/asado/asado.png" 
+      <Image 
+        src={asadoImg} 
         alt="תבשיל אסאדו חגיגי" 
         class="w-full h-full object-cover opacity-70"
+        quality="high"
+        loading="eager"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-transparent"></div>
     </div>
