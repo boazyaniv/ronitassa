@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = "מתכון לצלי כתף מס׳ 5 בבישול איטי | רוני טסה";
+const pageDescription = "מתכון קלאסי לצלי כתף (מספר 5) שמתרכך בבישול ארוך עם ירקות שורש ויין אדום. המנה המושלמת לארוחת שבת, עשירה בטעמים וקלה להכנה.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/images/products/chuck-roast/chuck-roast.png" 
+        alt="צלי כתף בבישול איטי" 
+        class="w-full h-full object-cover opacity-70"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div class="inline-block bg-primary-red text-white text-sm font-bold px-4 py-1 rounded-full mb-6 shadow-lg">מתכון מומלץ</div>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">צלי כתף בבישול ארוך</h1>
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto">
+        נתח קלאסי שמקבל באהבה בישול איטי. התוצאה: בשר רך שמתפרק בפה ברוטב עשיר.
+      </p>
+    </div>
+  </section>
+
+  <div class="container mx-auto px-4 py-16 -mt-20 relative z-20">
+    <div class="bg-neutral-900 border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl max-w-4xl mx-auto">
+      
+      <!-- Meta Info -->
+      <div class="flex flex-wrap gap-8 justify-center text-gray-300 border-b border-white/10 pb-8 mb-8">
+        <div class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <span class="block text-xs uppercase tracking-wider text-gray-500">זמן בישול</span>
+            <span class="font-bold">3 שעות</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+          </svg>
+          <div>
+            <span class="block text-xs uppercase tracking-wider text-gray-500">רמת קושי</span>
+            <span class="font-bold">בינוני</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <div>
+            <span class="block text-xs uppercase tracking-wider text-gray-500">מנות</span>
+            <span class="font-bold">6-8 סועדים</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Introduction -->
+      <div class="prose prose-invert prose-lg max-w-none mb-12">
+        <p class="text-xl leading-relaxed text-gray-300">
+          צלי כתף (נתח מספר 5) הוא המלך הבלתי מעורער של קדרות החורף והחגים. זהו נתח עם במרקם ייחודי שדורש זמן וסבלנות, אך התמורה היא בשר עשיר בטעמים ורך להפליא.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Ingredients -->
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            מצרכים
+          </h3>
+          <ul class="space-y-4 text-lg text-gray-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-primary-red">•</span>
+              <span>
+                <a href="/products/beef#chuck-roast" class="text-accent hover:text-white border-b border-accent/30 hover:border-white transition-colors font-bold">נתח צלי כתף (מס' 5) שלם</a> 
+                (כ-1.5 עד 2 ק"ג)
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-primary-red">•</span>
+              <span>3 כפות שמן זית</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-primary-red">•</span>
+              <span>2 בצלים גדולים, חתוכים גס</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-primary-red">•</span>
+              <span>3 גזרים, חתוכים לטבעות עבות</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-primary-red">•</span>
+              <span>3-4 שיני שום שלמות</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-primary-red">•</span>
+              <span>2 כוסות יין אדום יבש</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-primary-red">•</span>
+              <span>2 כוסות ציר בקר או מים</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-primary-red">•</span>
+              <span>עלי דפנה ופלפל אנגלי (לפי הטעם)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Instructions -->
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            אופן ההכנה
+          </h3>
+          <ol class="space-y-6 text-lg text-gray-300 relative border-r border-white/10 pr-6 mr-3">
+            <li class="relative">
+              <span class="absolute -right-[33px] top-1 w-6 h-6 bg-primary-red rounded-full flex items-center justify-center text-xs font-bold text-white">1</span>
+              <div>
+                <strong class="block text-white mb-1">סגירת הנתח</strong>
+                מחממים סיר רחב ושטוח (סוטאז') עם שמן זית. מתבלים את הבשר במלח ופלפל וצורבים אותו היטב מכל הצדדים עד להשחמה עמוקה. מוציאים לצלחת.
+              </div>
+            </li>
+            <li class="relative">
+              <span class="absolute -right-[33px] top-1 w-6 h-6 bg-neutral-800 border border-white/20 rounded-full flex items-center justify-center text-xs font-bold text-white">2</span>
+              <div>
+                <strong class="block text-white mb-1">טיגון בסיס הירקות</strong>
+                לאותו סיר מכניסים את הבצל והגזר ומטגנים כ-5 דקות עד להזהבה. מוסיפים את השום לדקה נוספת.
+              </div>
+            </li>
+            <li class="relative">
+              <span class="absolute -right-[33px] top-1 w-6 h-6 bg-neutral-800 border border-white/20 rounded-full flex items-center justify-center text-xs font-bold text-white">3</span>
+              <div>
+                <strong class="block text-white mb-1">הרכבת הסיר</strong>
+                מחזירים את הבשר לסיר. שופכים את היין ומגרדים את תחתית הסיר בכף עץ. מוסיפים את הציר/מים ואת התבלינים. הנוזלים צריכים לכסות כ-3/4 מגובה הבשר.
+              </div>
+            </li>
+            <li class="relative">
+              <span class="absolute -right-[33px] top-1 w-6 h-6 bg-neutral-800 border border-white/20 rounded-full flex items-center justify-center text-xs font-bold text-white">4</span>
+              <div>
+                <strong class="block text-white mb-1">בישול איטי</strong>
+                מביאים לרתיחה, מנמיכים ללהבה הנמוכה ביותר, מכסים היטב ומבשלים כ-3 שעות. בודקים מדי פעם שיש נוזלים. הבשר מוכן כשהוא רך מאוד ונימוח. אפשר לפרוס רק כשהבשר מתקרר לחלוטין.
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Butcher's Tip -->
+      <div class="mt-16 bg-gradient-to-br from-primary-red/20 to-neutral-900 border border-primary-red/30 rounded-2xl p-8 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-24 h-24 bg-primary-red/20 blur-2xl rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3 relative z-10">
+          טיפ מהקצב
+        </h3>
+        <p class="text-xl text-gray-200 leading-relaxed italic relative z-10">
+          "הסוד לפריסה יפה של צלי כתף (ולא שיתפורר) הוא לקרר את הנתח לגמרי במקרר לאחר הבישול, ורק אז לפרוס אותו פרוסות דקות נגד כיוון הסיבים. מחממים את הפרוסות בתוך הרוטב לפני ההגשה."
+        </p>
+      </div>
+
+      <!-- Deep Link CTA -->
+      <div class="mt-12 text-center">
+        <a href="/products/beef#chuck-roast" class="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          הזמן צלי כתף טרי עכשיו
+        </a>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
