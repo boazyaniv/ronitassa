@@ -10,6 +10,7 @@ import kosherBadgeImg from '../assets/images/kosher-badge.png';
 interface Props {
   title?: string;
   description?: string;
+  schema?: object | object[];
 }
 
 const {
@@ -145,6 +146,11 @@ const businessSchema = {
     <!-- Breadcrumb Structured Data -->
     {breadcrumbSchema && (
       <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
+
+    <!-- Page Specific Structured Data -->
+    {Astro.props.schema && (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(Astro.props.schema)} />
     )}
   </head>
   <body class="flex flex-col min-h-screen">

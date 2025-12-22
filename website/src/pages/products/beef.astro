@@ -5,14 +5,36 @@ import productsData from '../../data/products.json';
 import { Image } from 'astro:assets';
 import beefCategoryImg from '../../assets/images/beef-category.png';
 
-const pageTitle = "בשר בקר איכותי מיושן במקום | רוני טסה";
-const pageDescription = "נתחי בשר בקר מובחרים, מיושנים במקום בתנאים מבוקרים. אנטריקוט, פילה מניון, צלי עגל ועוד. מסורת של מעל 50 שנה.";
+// SEO & Schema
+const pageTitle = "בשר בקר טרי ומיושן ברמת גן | רוני טסה - קצביית בוטיק בשרים איכותית";
+const pageDescription = "גלו את נתחי הבקר המובחרים של רוני טסה. אנטריקוט, פילה, סינטה ועוד - מיושנים בקפידה במקום. בשר טרי ואיכותי למנגל, לתנור ולבישול. משלוחים לרמת גן והסביבה.";
 
 const category = productsData.categories.find(cat => cat.slug === 'beef');
 const beefProducts = category?.products || [];
+
+const productSchema = beefProducts.map(product => ({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.name,
+  "description": product.description,
+  "image": new URL(product.image, "https://tassa-butchershop.co.il").href,
+  "sku": product.id,
+  "brand": {
+    "@type": "Brand",
+    "name": "רוני טסה"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": `https://tassa-butchershop.co.il/products/beef#${product.id}`,
+    "priceCurrency": "ILS",
+    "price": product.price.replace(/\D+(\d+).*/, '$1'), // Extract numeric price roughly
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}));
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={productSchema}>
   <!-- Hero Section -->
   <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">

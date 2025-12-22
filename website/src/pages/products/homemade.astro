@@ -5,14 +5,36 @@ import productsData from '../../data/products.json';
 import { Image } from 'astro:assets';
 import homemadeCategoryImg from '../../assets/images/homemade-category.png';
 
-const pageTitle = "מוצרי בית מוכנים לבישול | רוני טסה";
-const pageDescription = "מוצרי בית טעימים והכנה קלה - המבורגרים, קבב, שווארמה ועוד. הכל מוכן, רק להכניס לתנור או למחבת.";
+// SEO & Schema
+const pageTitle = "מוצרי בשר תוצרת בית למנגל | רוני טסה - קצביית בוטיק";
+const pageDescription = "המוצרים המוכנים שלנו: המבורגרים, קבבים, נקניקיות צ'וריסוס ומרגז - הכל נעשה במקום בעבודת יד מ 100% בשר איכותי. הכוכבים של המנגל שלכם.";
 
 const category = productsData.categories.find(cat => cat.slug === 'homemade');
 const homemadeProducts = category?.products || [];
+
+const productSchema = homemadeProducts.map(product => ({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.name,
+  "description": product.description,
+  "image": new URL(product.image, "https://tassa-butchershop.co.il").href,
+  "sku": product.id,
+  "brand": {
+    "@type": "Brand",
+    "name": "רוני טסה"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": `https://tassa-butchershop.co.il/products/homemade#${product.id}`,
+    "priceCurrency": "ILS",
+    "price": product.price.replace(/\D+(\d+).*/, '$1'), // Extract numeric price roughly
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}));
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={productSchema}>
   <!-- Hero Section -->
   <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">

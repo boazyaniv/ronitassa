@@ -5,14 +5,36 @@ import productsData from '../../data/products.json';
 import { Image } from 'astro:assets';
 import lambCategoryImg from '../../assets/images/lamb-category.png';
 
-const pageTitle = "בשר כבש וטלה משובח | רוני טסה";
-const pageDescription = "נתחי כבש וטלה טריים ומשובחים - שיפודים, צלעות, כתף ועוד. בשר עדין, עשיר בטעם ומתאים לכל סוגי ההכנה.";
+// SEO & Schema
+const pageTitle = "בשר טלה וכבש טרי ברמת גן | רוני טסה - קצביית בוטיק";
+const pageDescription = "צלעות טלה, כתף טלה, וקבב כבש משובח. בשר טלה איכותי וטרי יום יום בקצביית הבוטיק של רוני טסה. מושלם לעל האש ולתבשילי קדירה. משלוחים לרמת גן והסביבה.";
 
 const category = productsData.categories.find(cat => cat.slug === 'lamb');
 const lambProducts = category?.products || [];
+
+const productSchema = lambProducts.map(product => ({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.name,
+  "description": product.description,
+  "image": new URL(product.image, "https://tassa-butchershop.co.il").href,
+  "sku": product.id,
+  "brand": {
+    "@type": "Brand",
+    "name": "רוני טסה"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": `https://tassa-butchershop.co.il/products/lamb#${product.id}`,
+    "priceCurrency": "ILS",
+    "price": product.price.replace(/\D+(\d+).*/, '$1'), // Extract numeric price roughly
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}));
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={productSchema}>
   <!-- Hero Section -->
   <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
