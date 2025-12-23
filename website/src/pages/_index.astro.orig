@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import productsData from '../data/products.json';
 import siteInfo from '../data/site-info.json';
 import ReviewsCarousel from '../components/ReviewsCarousel.astro';
-import FAQ from '../components/FAQ.astro';
 import { Image } from 'astro:assets';
 
 // Import images
@@ -52,7 +51,7 @@ const categories = [
         <a href="/products" class="btn btn-primary text-xl py-4 px-10 shadow-xl shadow-red-900/20 hover:shadow-red-900/40 transform hover:-translate-y-1 transition-all duration-300">
           לכל המחלקות
         </a>
-        <a href="/contact" class="btn bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 text-xl py-4 px-10 shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+        <a href="#contact" class="btn bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 text-xl py-4 px-10 shadow-xl transform hover:-translate-y-1 transition-all duration-300">
           צור קשר
         </a>
       </div>
@@ -156,9 +155,6 @@ const categories = [
   </section>
   <ReviewsCarousel />
 
-  <!-- FAQ Section -->
-  <FAQ />
-
   <!-- CTA Section -->
   <section id="contact" class="py-24 bg-neutral-950 text-white relative overflow-hidden border-t border-white/10">
     <div class="absolute inset-0 bg-gradient-to-br from-primary-red/20 via-transparent to-transparent"></div>
@@ -168,7 +164,7 @@ const categories = [
         הזמינו עכשיו בוואטסאפ או בטלפון ותיהנו מבשר טרי ואיכותי במשלוח עד הבית.
       </p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href={`tel:${siteInfo.contact.phone}`} class="btn btn-primary text-xl py-4 px-12 shadow-xl shadow-red-900/30 hover:shadow-red-900/50 transition-all">
+        <a href={`tel:${siteInfo.contact.phone}`} class="btn bg-primary-red text-white hover:bg-red-700 text-xl py-4 px-12 shadow-xl shadow-red-900/30 hover:shadow-red-900/50 transition-all">
           חייגו אלינו
         </a>
         <a href={`https://wa.me/${whatsappNumber}`} class="btn bg-[#25D366] text-white hover:bg-[#128C7E] text-xl py-4 px-12 shadow-xl shadow-green-900/30 hover:shadow-green-900/50 transition-all">

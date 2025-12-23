@@ -52,15 +52,18 @@ const businessSchema = {
   "@context": "https://schema.org",
   "@type": "ButcherShop",
   "name": siteInfo.name,
+  "description": "Boutique kosher butcher shop in Ramat Gan offering premium aged beef, fresh poultry, and homemade kebabs since 1971. Located 1 minute from Ramat Gan National Park, perfect for BBQ pickup.",
   "image": new URL(heroBgOptimized.src, siteInfo.seo.siteUrl),
   "@id": siteInfo.seo.siteUrl,
   "url": siteInfo.seo.siteUrl,
   "telephone": siteInfo.contact.phone,
   "priceRange": "$$",
+  "foundingDate": "1971",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": siteInfo.address.street,
     "addressLocality": siteInfo.address.city,
+    "addressRegion": "Tel Aviv District",
     "addressCountry": "IL"
   },
   "geo": {
@@ -68,6 +71,26 @@ const businessSchema = {
     "latitude": 32.051512,
     "longitude": 34.819383
   },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Ramat Gan"
+    },
+    {
+      "@type": "City",
+      "name": "Ramat Chen"
+    },
+    {
+      "@type": "City",
+      "name": "Givatayim"
+    },
+    {
+      "@type": "City",
+      "name": "Tel Aviv"
+    }
+  ],
+  "servesCuisine": ["Israeli", "Middle Eastern", "BBQ"],
+  "knowsAbout": ["Premium Beef", "Aged Meat", "Kosher Meat", "BBQ", "Homemade Kebabs", "Fresh Poultry"],
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -158,7 +181,7 @@ const businessSchema = {
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[100] focus:bg-white focus:text-black focus:px-4 focus:py-2">דלג לתוכן הראשי</a>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-black shadow-xl border-b-2 border-primary">
+    <header class="fixed inset-x-0 top-0 z-50 bg-black shadow-xl border-b-2 border-primary">
       <div class="container">
         <div class="flex items-center justify-between py-4">
           
@@ -264,7 +287,7 @@ const businessSchema = {
     </header>
 
     <!-- Main Content -->
-    <main id="main-content" class="flex-grow">
+    <main id="main-content" class="flex-grow pt-28 md:pt-32">
       <Breadcrumbs />
       <slot />
     </main>

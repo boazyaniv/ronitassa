@@ -63,16 +63,16 @@ A modern, Hebrew RTL website for Roni Tassa's boutique butcher shop in Ramat Gan
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Start dev server
-npm run dev
+pnpm dev
 
 # Build for production
-npm run build
+pnpm build
 
 # Preview production build
-npm run preview
+pnpm preview
 ```
 
 ### Dev Server

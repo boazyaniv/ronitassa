@@ -185,17 +185,6 @@
           "image": "/images/products/shank/beef-shank.png"
         },
         {
-          "id": "viennese-schnitzel",
-          "name": "שניצל וינאי (שייטל)",
-          "cutType": "מוכן לטיגון",
-          "description": "שניצל וינאי מנתח שייטל איכותי",
-          "price": "120 ₪ לק״ג",
-          "cuttingOptions": [
-            "שניצל"
-          ],
-          "image": "/images/products/viennese-schnitzel/viennese-schnitzel.jpg"
-        },
-        {
           "id": "denver",
           "name": "דנבר",
           "cutType": "נתח פרימיום",

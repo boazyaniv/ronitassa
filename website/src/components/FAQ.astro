@@ -1,0 +1,92 @@
+---
+import siteInfo from '../data/site-info.json';
+
+// FAQ Component with Schema.org markup for AI optimization
+const faqs = [
+  {
+    question: "האם הבשר ברוני טסה כשר?",
+    answer: "כן. עוף בכשרות מהדרין, בקר וטלה בכשרות בית יוסף, והחנות כולה בפיקוח רבנות רמת גן. כל המוצרים שלנו כשרים ללא יוצא מן הכלל."
+  },
+  {
+    question: "האם יש משלוחים לרמת חן?",
+    answer: "כן, אנחנו מספקים משלוחי בשר יומיים לרמת חן, רמת שקמה, גבעתיים ותל אביב. עלות המשלוח 30 ₪. ניתן להזמין טלפונית או בווטסאפ."
+  },
+  {
+    question: "כמה בשר צריך ל-10 אנשים במנגל?",
+    answer: "למנגל ל-10 אנשים מומלץ להכין 3-4 ק״ג בשר (300-400 גרם לאדם). אנחנו ממליצים על שילוב: 1.5 ק״ג אנטריקוט, 1 ק״ג קבב ו-1 ק״ג שיפודי פרגית. תמיד עדיף להכין קצת יותר!"
+  },
+  {
+    question: "מה הנתח הטוב ביותר למנגל?",
+    answer: "לגריל מהיר ומושלם - אנטריקוט או סינטה. לבישול איטי על גחלים - אסאדו או צלי כתף. לקבבים ושיפודים - הקבבים הביתיים שלנו עם המתכון המשפחתי משנת 1971 הם הכי פופולריים!"
+  },
+  {
+    question: "כמה רחוק אתם מהפארק הלאומי?",
+    answer: "אנחנו ממוקמים ברחוב שלם 12, רמת גן - פחות מחמש דקות נסיעה מהפארק הלאומי רמת גן! מושלם למי שמתכנן מנגל בפארק. תתקשרו שעה מראש ונארוז לכם הכל בקירור והבשר מוכן לגריל."
+  },
+  {
+    question: "מה שעות הפעילות?",
+    answer: "ימים א׳-ה׳: 07:30-18:30, יום ו׳: 07:30-13:30. אנחנו סגורים בשבת. מומלץ להתקשר מראש להזמנות גדולות."
+  },
+  {
+    question: "האם אפשר להזמין מראש?",
+    answer: "בהחלט! אנחנו ממליצים להזמין מראש במיוחד לסופי שבוע וחגים. ניתן להזמין טלפונית ב-03-631-1099 או בווטסאפ. הזמנות מראש מבטיחות שהנתחים המדויקים שאתם רוצים יהיו מוכנים ומארוזים."
+  }
+];
+---
+
+<section id="faq" class="py-20 bg-neutral-900">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">שאלות נפוצות</h2>
+        <div class="w-24 h-1 bg-primary-red mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-6 text-lg">כל מה שרציתם לדעת על הבשר, המשלוחים והשירות שלנו</p>
+      </div>
+
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <div 
+            itemscope 
+            itemprop="mainEntity" 
+            itemtype="https://schema.org/Question"
+            class="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-primary-red/30 transition-all"
+          >
+            <h3 
+              itemprop="name" 
+              class="text-2xl font-bold text-accent mb-4 flex items-start gap-3"
+            >
+              <span class="text-primary-red text-3xl flex-shrink-0">•</span>
+              <span>{faq.question}</span>
+            </h3>
+            <div 
+              itemscope 
+              itemprop="acceptedAnswer" 
+              itemtype="https://schema.org/Answer"
+            >
+              <p 
+                itemprop="text" 
+                class="text-gray-300 leading-relaxed text-lg pr-9"
+              >
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+})} />

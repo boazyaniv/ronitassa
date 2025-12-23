@@ -44,13 +44,14 @@ ronitassa/
 
 ```bash
 cd website
-npm install
+pnpm install
 ```
+(pnpm is the project standard; npm still works if needed.)
 
 ### Running Locally
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 The site will be available at `http://localhost:4321`
@@ -58,7 +59,7 @@ The site will be available at `http://localhost:4321`
 ### Building for Production
 
 ```bash
-npm run build
+pnpm build
 ```
 
 The built site will be in the `dist/` directory.
