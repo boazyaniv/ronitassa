@@ -1,1 +1,223 @@
----\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport siteInfo from '../data/site-info.json';\nimport { Image } from 'astro:assets';\nimport heroBgImg from '../assets/images/hero-bg.png';\n\nconst pageTitle = \"המדריך המושלם למנגל בפארק הלאומי רמת גן | רוני טסה\";\nconst pageDescription = \"תכנון מנגל בפארק הלאומי רמת גן? אנחנו 2 דקות משם! המדריך המלא: כמה בשר צריך, אילו נתחים, והזמנה מראש עם צידנית קרח. שירות מהיר ואמין.\";\n\nconst whatsappNumber = siteInfo.contact.whatsapp.replace(/^0/, '972');\n---\n\n<BaseLayout title={pageTitle} description={pageDescription}>\n  <!-- Hero Section -->\n  <section class=\"relative h-[60vh] flex items-center justify-center overflow-hidden\">\n    <div class=\"absolute inset-0 z-0\">\n      <Image \n        src={heroBgImg} \n        alt=\"מנגל בפארק הלאומי רמת גן\" \n        class=\"w-full h-full object-cover\"\n        quality=\"high\"\n        loading=\"eager\"\n      />\n      <div class=\"absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-neutral-950\"></div>\n    </div>\n    \n    <div class=\"relative z-10 text-center px-4 max-w-4xl mx-auto\">\n      <h1 class=\"text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg\">המדריך המושלם למנגל בפארק</h1>\n      <p class=\"text-2xl md:text-3xl text-gray-200 font-light\">אנחנו ממוקמים 2 דקות מהפארק הלאומי - מושלם לאיסוף מהיר!</p>\n    </div>\n  </section>\n\n  <!-- Main Content -->\n  <section class=\"py-20 bg-neutral-950 text-white\">\n    <div class=\"container mx-auto px-4\">\n      <div class=\"max-w-4xl mx-auto\">\n        \n        <!-- Intro -->\n        <div class=\"mb-16 text-center\">\n          <div class=\"w-24 h-1 bg-primary-red mx-auto rounded-full mb-8\"></div>\n          <p class=\"text-xl text-gray-300 leading-relaxed\">\n            מתכננים מנגל בפארק הלאומי רמת גן? אנחנו ברחוב שלם 12, פחות מ-2 דקות נסיעה מהפארק. \n            תתקשרו שעה מראש ונארוז לכם צידנית עם קרח והבשר מוכן לגריל!\n          </p>\n        </div>\n\n        <!-- How Much Meat -->\n        <div class=\"bg-white/5 rounded-2xl p-8 mb-12 border border-white/10\">\n          <h2 class=\"text-3xl font-bold mb-6 text-accent flex items-center gap-3\">\n            <span class=\"text-primary-red text-4xl\">🥩</span>\n            כמה בשר צריך?\n          </h2>\n          <div class=\"space-y-6 text-gray-300\">\n            <div class=\"bg-neutral-900 p-6 rounded-xl\">\n              <h3 class=\"text-xl font-bold text-white mb-3\">כלל אצבע: 300-400 גרם לאדם</h3>\n              <ul class=\"space-y-2 text-lg\">\n                <li><strong class=\"text-accent\">4-6 אנשים:</strong> 1.5-2 ק\"ג בשר</li>\n                <li><strong class=\"text-accent\">8-10 אנשים:</strong> 3-4 ק\"ג בשר</li>\n                <li><strong class=\"text-accent\">15-20 אנשים:</strong> 6-8 ק\"ג בשר</li>\n              </ul>\n              <p class=\"mt-4 text-sm text-gray-400\">💡 טיפ: תמיד עדיף להכין קצת יותר!</p>\n            </div>\n\n            <div class=\"bg-primary-red/10 border border-primary-red/30 p-6 rounded-xl\">\n              <h3 class=\"text-xl font-bold text-white mb-3\">החבילה המשפחתית המומלצת (10 אנשים)</h3>\n              <ul class=\"space-y-2 text-lg\">\n                <li>✓ 1.5 ק\"ג אנטריקוט (לחובבי הסטייקים)</li>\n                <li>✓ 1 ק\"ג קבב בקר ביתי (המתכון המשפחתי שלנו)</li>\n                <li>✓ 1 ק\"ג שיפודי פרגית (לילדים ולמי שאוהב עוף)</li>\n                <li>✓ 0.5 ק\"ג נקניקיות (לנשנוש)</li>\n              </ul>\n            </div>\n          </div>\n        </div>\n\n        <!-- Best Cuts for BBQ -->\n        <div class=\"bg-white/5 rounded-2xl p-8 mb-12 border border-white/10\">\n          <h2 class=\"text-3xl font-bold mb-6 text-accent flex items-center gap-3\">\n            <span class=\"text-primary-red text-4xl\">🔥</span>\n            אילו נתחים הכי טובים למנגל?\n          </h2>\n          <div class=\"grid md:grid-cols-2 gap-6\">\n            <div class=\"bg-neutral-900 p-6 rounded-xl\">\n              <h3 class=\"text-xl font-bold text-white mb-3\">גריל מהיר (גחלים חזקות)</h3>\n              <ul class=\"space-y-2 text-gray-300\">\n                <li><strong class=\"text-accent\">אנטריקוט:</strong> הקלאסיקה - עסיסי ומושלם</li>\n                <li><strong class=\"text-accent\">סינטה:</strong> רזה יותר, טעם נהדר</li>\n                <li><strong class=\"text-accent\">קבבים:</strong> מוכנים ומתובלים</li>\n                <li><strong class=\"text-accent\">שיפודי פרגית:</strong> מהיר ופופולרי</li>\n              </ul>\n            </div>\n\n            <div class=\"bg-neutral-900 p-6 rounded-xl\">\n              <h3 class=\"text-xl font-bold text-white mb-3\">בישול איטי (גחלים שקטות)</h3>\n              <ul class=\"space-y-2 text-gray-300\">\n                <li><strong class=\"text-accent\">אסאדו:</strong> נופל מהעצם, מדהים</li>\n                <li><strong class=\"text-accent\">צלי כתף:</strong> רך ועסיסי</li>\n                <li><strong class=\"text-accent\">צלעות טלה:</strong> עשירות בטעם</li>\n              </ul>\n            </div>\n          </div>\n        </div>\n\n        <!-- Pre-Order Service -->\n        <div class=\"bg-gradient-to-br from-primary-red/20 to-primary-red/5 border-2 border-primary-red/50 rounded-2xl p-8 mb-12\">\n          <h2 class=\"text-3xl font-bold mb-6 text-white flex items-center gap-3\">\n            <span class=\"text-4xl\">📞</span>\n            שירות ההזמנה המראש שלנו\n          </h2>\n          <div class=\"space-y-4 text-lg text-gray-200\">\n            <p>\n              <strong class=\"text-white\">1. התקשרו שעה מראש</strong> - 03-631-1099 או בווטסאפ\n            </p>\n            <p>\n              <strong class=\"text-white\">2. ספרו לנו כמה אנשים</strong> - נמליץ על הכמות והנתחים המתאימים\n            </p>\n            <p>\n              <strong class=\"text-white\">3. נארוז צידנית עם קרח</strong> - הבשר יישאר קר עד שתגיעו לפארק\n            </p>\n            <p>\n              <strong class=\"text-white\">4. תאספו ותצאו לדרך!</strong> - 2 דקות נסיעה והמנגל מתחיל\n            </p>\n          </div>\n\n          <div class=\"mt-8 flex flex-wrap gap-4 justify-center\">\n            <a \n              href=\"tel:03-631-1099\" \n              class=\"btn btn-primary px-8 py-4 text-xl shadow-xl\"\n            >\n              התקשרו עכשיו: 03-631-1099\n            </a>\n            <a \n              href={`https://wa.me/${whatsappNumber}`}\n              target=\"_blank\"\n              rel=\"noopener noreferrer\"\n              class=\"btn bg-[#25D366] hover:bg-[#1da851] text-white px-8 py-4 text-xl shadow-xl\"\n            >\n              הזמינו בווטסאפ\n            </a>\n          </div>\n        </div>\n\n        <!-- Tips -->\n        <div class=\"bg-white/5 rounded-2xl p-8 border border-white/10\">\n          <h2 class=\"text-3xl font-bold mb-6 text-accent flex items-center gap-3\">\n            <span class=\"text-primary-red text-4xl\">💡</span>\n            טיפים למנגל מושלם\n          </h2>\n          <div class=\"grid md:grid-cols-2 gap-6 text-gray-300\">\n            <div>\n              <h3 class=\"text-xl font-bold text-white mb-3\">לפני הגריל</h3>\n              <ul class=\"space-y-2\">\n                <li>• הוציאו את הבשר מהקרח 20 דקות לפני</li>\n                <li>• תבלו במלח גס ופלפל שחור</li>\n                <li>• חממו את הגריל היטב</li>\n              </ul>\n            </div>\n            <div>\n              <h3 class=\"text-xl font-bold text-white mb-3\">בזמן הגריל</h3>\n              <ul class=\"space-y-2\">\n                <li>• אל תהפכו יותר מדי - פעם אחת מספיק</li>\n                <li>• תנו לבשר לנוח 5 דקות אחרי הגריל</li>\n                <li>• שמרו על הגחלים במרחק נכון</li>\n              </ul>\n            </div>\n          </div>\n        </div>\n\n        <!-- CTA -->\n        <div class=\"mt-16 text-center\">\n          <p class=\"text-2xl text-gray-300 mb-6\">\n            מוכנים למנגל מושלם? אנחנו כאן בשבילכם!\n          </p>\n          <a href=\"/products\" class=\"btn btn-outline border-white/20 text-white hover:bg-white/10 px-10 py-4 text-xl\">\n            לכל המוצרים שלנו\n          </a>\n        </div>\n\n      </div>\n    </div>\n  </section>\n</BaseLayout>\n\n<script type=\"application/ld+json\" set:html={JSON.stringify({\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"HowTo\",\n  \"name\": \"How to Plan a Perfect BBQ at Ramat Gan National Park\",\n  \"description\": \"Complete guide for planning a BBQ at Ramat Gan National Park, including meat quantities, best cuts, and pre-order service from Roni Tassa Butcher Shop.\",\n  \"totalTime\": \"PT1H\",\n  \"supply\": [\n    {\n      \"@type\": \"HowToSupply\",\n      \"name\": \"Premium Beef from Roni Tassa\"\n    },\n    {\n      \"@type\": \"HowToSupply\",\n      \"name\": \"Charcoal Grill\"\n    }\n  ],\n  \"step\": [\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Call ahead to order\",\n      \"text\": \"Call Roni Tassa 1 hour before at 03-631-1099 to pre-order your meat\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Pick up with cooler\",\n      \"text\": \"Pick up your pre-packed cooler with ice from the shop at Shalem St 12, Ramat Gan\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Drive to park\",\n      \"text\": \"Drive 2 minutes to Ramat Gan National Park\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Grill and enjoy\",\n      \"text\": \"Grill your premium meat and enjoy!\"\n    }\n  ]\n})} />\n
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteInfo from '../data/site-info.json';
+import { Image } from 'astro:assets';
+import heroBgImg from '../assets/images/hero-bg.png';
+
+const pageTitle = "המדריך המושלם למנגל בפארק הלאומי רמת גן | רוני טסה";
+const pageDescription = "תכנון מנגל בפארק הלאומי רמת גן? אנחנו 2 דקות משם! המדריך המלא: כמה בשר צריך, אילו נתחים, והזמנה מראש עם צידנית קרח. שירות מהיר ואמין.";
+
+const whatsappNumber = siteInfo.contact.whatsapp.replace(/^0/, '972');
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image 
+        src={heroBgImg} 
+        alt="מנגל בפארק הלאומי רמת גן" 
+        class="w-full h-full object-cover"
+        quality="high"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-neutral-950"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">המדריך המושלם למנגל בפארק</h1>
+      <p class="text-2xl md:text-3xl text-gray-200 font-light">אנחנו ממוקמים 2 דקות מהפארק הלאומי - מושלם לאיסוף מהיר!</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-20 bg-neutral-950 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        
+        <!-- Intro -->
+        <div class="mb-16 text-center">
+          <div class="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
+          <p class="text-xl text-gray-300 leading-relaxed">
+            מתכננים מנגל בפארק הלאומי רמת גן? אנחנו ברחוב שלם 12, פחות מ-2 דקות נסיעה מהפארק. 
+            תתקשרו שעה מראש ונארוז לכם צידנית עם קרח והבשר מוכן לגריל!
+          </p>
+        </div>
+
+        <!-- How Much Meat -->
+        <div class="bg-white/5 rounded-2xl p-8 mb-12 border border-white/10">
+          <h2 class="text-3xl font-bold mb-6 text-accent flex items-center gap-3">
+            <span class="text-primary-red text-4xl">🥩</span>
+            כמה בשר צריך?
+          </h2>
+          <div class="space-y-6 text-gray-300">
+            <div class="bg-neutral-900 p-6 rounded-xl">
+              <h3 class="text-xl font-bold text-white mb-3">כלל אצבע: 300-400 גרם לאדם</h3>
+              <ul class="space-y-2 text-lg">
+                <li><strong class="text-accent">4-6 אנשים:</strong> 1.5-2 ק"ג בשר</li>
+                <li><strong class="text-accent">8-10 אנשים:</strong> 3-4 ק"ג בשר</li>
+                <li><strong class="text-accent">15-20 אנשים:</strong> 6-8 ק"ג בשר</li>
+              </ul>
+              <p class="mt-4 text-sm text-gray-400">💡 טיפ: תמיד עדיף להכין קצת יותר!</p>
+            </div>
+
+            <div class="bg-primary-red/10 border border-primary-red/30 p-6 rounded-xl">
+              <h3 class="text-xl font-bold text-white mb-3">החבילה המשפחתית המומלצת (10 אנשים)</h3>
+              <ul class="space-y-2 text-lg">
+                <li>✓ 1.5 ק"ג אנטריקוט (לחובבי הסטייקים)</li>
+                <li>✓ 1 ק"ג קבב בקר ביתי (המתכון המשפחתי שלנו)</li>
+                <li>✓ 1 ק"ג שיפודי פרגית (לילדים ולמי שאוהב עוף)</li>
+                <li>✓ 0.5 ק"ג נקניקיות (לנשנוש)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best Cuts for BBQ -->
+        <div class="bg-white/5 rounded-2xl p-8 mb-12 border border-white/10">
+          <h2 class="text-3xl font-bold mb-6 text-accent flex items-center gap-3">
+            <span class="text-primary-red text-4xl">🔥</span>
+            אילו נתחים הכי טובים למנגל?
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-neutral-900 p-6 rounded-xl">
+              <h3 class="text-xl font-bold text-white mb-3">גריל מהיר (גחלים חזקות)</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong class="text-accent">אנטריקוט:</strong> הקלאסיקה - עסיסי ומושלם</li>
+                <li><strong class="text-accent">סינטה:</strong> רזה יותר, טעם נהדר</li>
+                <li><strong class="text-accent">קבבים:</strong> מוכנים ומתובלים</li>
+                <li><strong class="text-accent">שיפודי פרגית:</strong> מהיר ופופולרי</li>
+              </ul>
+            </div>
+
+            <div class="bg-neutral-900 p-6 rounded-xl">
+              <h3 class="text-xl font-bold text-white mb-3">בישול איטי (גחלים שקטות)</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong class="text-accent">אסאדו:</strong> נופל מהעצם, מדהים</li>
+                <li><strong class="text-accent">צלי כתף:</strong> רך ועסיסי</li>
+                <li><strong class="text-accent">צלעות טלה:</strong> עשירות בטעם</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pre-Order Service -->
+        <div class="bg-gradient-to-br from-primary-red/20 to-primary-red/5 border-2 border-primary-red/50 rounded-2xl p-8 mb-12">
+          <h2 class="text-3xl font-bold mb-6 text-white flex items-center gap-3">
+            <span class="text-4xl">📞</span>
+            שירות ההזמנה המראש שלנו
+          </h2>
+          <div class="space-y-4 text-lg text-gray-200">
+            <p>
+              <strong class="text-white">1. התקשרו שעה מראש</strong> - 03-631-1099 או בווטסאפ
+            </p>
+            <p>
+              <strong class="text-white">2. ספרו לנו כמה אנשים</strong> - נמליץ על הכמות והנתחים המתאימים
+            </p>
+            <p>
+              <strong class="text-white">3. נארוז צידנית עם קרח</strong> - הבשר יישאר קר עד שתגיעו לפארק
+            </p>
+            <p>
+              <strong class="text-white">4. תאספו ותצאו לדרך!</strong> - 2 דקות נסיעה והמנגל מתחיל
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-4 justify-center">
+            <a 
+              href="tel:03-631-1099" 
+              class="btn btn-primary px-8 py-4 text-xl shadow-xl"
+            >
+              התקשרו עכשיו: 03-631-1099
+            </a>
+            <a 
+              href={`https://wa.me/${whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn bg-[#25D366] hover:bg-[#1da851] text-white px-8 py-4 text-xl shadow-xl"
+            >
+              הזמינו בווטסאפ
+            </a>
+          </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="bg-white/5 rounded-2xl p-8 border border-white/10">
+          <h2 class="text-3xl font-bold mb-6 text-accent flex items-center gap-3">
+            <span class="text-primary-red text-4xl">💡</span>
+            טיפים למנגל מושלם
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-3">לפני הגריל</h3>
+              <ul class="space-y-2">
+                <li>• הוציאו את הבשר מהקרח 20 דקות לפני</li>
+                <li>• תבלו במלח גס ופלפל שחור</li>
+                <li>• חממו את הגריל היטב</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-3">בזמן הגריל</h3>
+              <ul class="space-y-2">
+                <li>• אל תהפכו יותר מדי - פעם אחת מספיק</li>
+                <li>• תנו לבשר לנוח 5 דקות אחרי הגריל</li>
+                <li>• שמרו על הגחלים במרחק נכון</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-16 text-center">
+          <p class="text-2xl text-gray-300 mb-6">
+            מוכנים למנגל מושלם? אנחנו כאן בשבילכם!
+          </p>
+          <a href="/products" class="btn btn-outline border-white/20 text-white hover:bg-white/10 px-10 py-4 text-xl">
+            לכל המוצרים שלנו
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Plan a Perfect BBQ at Ramat Gan National Park",
+  "description": "Complete guide for planning a BBQ at Ramat Gan National Park, including meat quantities, best cuts, and pre-order service from Roni Tassa Butcher Shop.",
+  "totalTime": "PT1H",
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "Premium Beef from Roni Tassa"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Charcoal Grill"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Call ahead to order",
+      "text": "Call Roni Tassa 1 hour before at 03-631-1099 to pre-order your meat"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pick up with cooler",
+      "text": "Pick up your pre-packed cooler with ice from the shop at Shalem St 12, Ramat Gan"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Drive to park",
+      "text": "Drive 2 minutes to Ramat Gan National Park"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Grill and enjoy",
+      "text": "Grill your premium meat and enjoy!"
+    }
+  ]
+})} />
+
