@@ -20,4 +20,4 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-Sitemap: https://tassa-butchershop.co.il/sitemap.xml
+Sitemap: https://tassa-butchershop.co.il/sitemap-index.xml
