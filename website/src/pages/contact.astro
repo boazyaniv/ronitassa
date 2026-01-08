@@ -60,7 +60,7 @@ const whatsappNumber = siteInfo.contact.whatsapp.replace(/^0/, '972');
               <div class="text-4xl bg-white/10 p-3 rounded-full group-hover:scale-110 transition-transform duration-300">📞</div>
               <div>
                 <h3 class="font-bold text-xl mb-2 text-accent">טלפון הקצביה</h3>
-                <a href={`tel:${siteInfo.contact.phone}`} class="text-2xl font-bold hover:text-primary transition-colors block mb-1">
+                <a href={`tel:${siteInfo.contact.phone}`} class="js-track-phone text-2xl font-bold hover:text-primary transition-colors block mb-1">
                   {siteInfo.contact.phone}
                 </a>
                 <p class="text-sm text-gray-400">זמינים בשעות הפעילות</p>
@@ -72,7 +72,7 @@ const whatsappNumber = siteInfo.contact.whatsapp.replace(/^0/, '972');
               <div class="text-4xl bg-white/10 p-3 rounded-full group-hover:scale-110 transition-transform duration-300">💬</div>
               <div>
                 <h3 class="font-bold text-xl mb-2 text-[#25D366]">WhatsApp</h3>
-                <a href={`https://wa.me/${whatsappNumber}`} class="text-2xl font-bold hover:text-[#25D366] transition-colors block mb-1" target="_blank" rel="noopener">
+                <a href={`https://wa.me/${whatsappNumber}`} class="js-track-whatsapp text-2xl font-bold hover:text-[#25D366] transition-colors block mb-1" target="_blank" rel="noopener">
                   {siteInfo.contact.whatsapp}
                 </a>
                 <p class="text-sm text-gray-400">שלחו הודעה ונחזור אליכם בהקדם</p>
@@ -101,10 +101,10 @@ const whatsappNumber = siteInfo.contact.whatsapp.replace(/^0/, '972');
 
           <!-- Quick Action Buttons -->
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href={`tel:${siteInfo.contact.phone}`} class="btn btn-primary text-center flex-1 py-4 text-lg shadow-lg shadow-primary/20">
+            <a href={`tel:${siteInfo.contact.phone}`} class="js-track-phone btn btn-primary text-center flex-1 py-4 text-lg shadow-lg shadow-primary/20">
               📞 התקשרו עכשיו
             </a>
-            <a href={`https://wa.me/${whatsappNumber}`} class="btn bg-[#25D366] text-white hover:bg-[#128C7E] text-center flex-1 py-4 text-lg shadow-lg shadow-[#25D366]/20 border-none">
+            <a href={`https://wa.me/${whatsappNumber}`} class="js-track-whatsapp btn bg-[#25D366] text-white hover:bg-[#128C7E] text-center flex-1 py-4 text-lg shadow-lg shadow-[#25D366]/20 border-none">
               💬 הודעה ב-WhatsApp
             </a>
           </div>
