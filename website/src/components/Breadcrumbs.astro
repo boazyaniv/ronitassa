@@ -23,9 +23,10 @@ const labels: Record<string, string> = {
 };
 
 const breadcrumbs = segments.map((segment, index) => {
+  const cleanSegment = segment.replace('.html', '');
   const url = `/${segments.slice(0, index + 1).join('/')}`;
   return {
-    label: labels[segment] || segment,
+    label: labels[cleanSegment] || cleanSegment,
     url,
     isFirst: index === 0,
     isLast: index === segments.length - 1

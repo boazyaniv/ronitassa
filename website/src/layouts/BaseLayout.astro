@@ -45,10 +45,11 @@ const breadcrumbSchema = segments.length > 0 ? {
       'picanha-chimichurri': 'פיקאניה בצ׳ימיצ׳ורי',
       'arayes': 'עראייס'
     };
+    const cleanSegment = segment.replace('.html', '');
     return {
       "@type": "ListItem",
       "position": index + 1,
-      "name": labels[segment] || segment,
+      "name": labels[cleanSegment] || cleanSegment,
       "item": new URL('/' + array.slice(0, index + 1).join('/'), siteInfo.seo.siteUrl)
     };
   })
