@@ -42,7 +42,8 @@ const breadcrumbSchema = segments.length > 0 ? {
       'chuck-roast': 'צלי כתף בבישול איטי',
       'entrecote-steak': 'סטייק אנטריקוט במחבת',
       'festive-asado': 'תבשיל אסאדו חגיגי',
-      'picanha-chimichurri': 'פיקאניה בצ׳ימיצ׳ורי'
+      'picanha-chimichurri': 'פיקאניה בצ׳ימיצ׳ורי',
+      'arayes': 'עראייס'
     };
     return {
       "@type": "ListItem",
@@ -140,9 +141,11 @@ const businessSchema = {
     <link rel="canonical" href={new URL(Astro.url.pathname.replace(/\/$/, ''), siteInfo.seo.siteUrl).href} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-96.png" sizes="96x96" />
     <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Roni Tassa" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
