@@ -50,7 +50,7 @@ const breadcrumbSchema = segments.length > 0 ? {
       "@type": "ListItem",
       "position": index + 1,
       "name": labels[cleanSegment] || cleanSegment,
-      "item": new URL('/' + array.slice(0, index + 1).join('/'), siteInfo.seo.siteUrl)
+      "item": new URL('/' + array.slice(0, index + 1).map(s => s.replace('.html', '')).join('/'), siteInfo.seo.siteUrl)
     };
   })
 } : null;
@@ -139,7 +139,7 @@ const businessSchema = {
     <meta name="google-site-verification" content="k5P0kIDf3pKhRimqfnvpvO2wue-5fqONtJKrAANRVCg" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href={new URL(Astro.url.pathname.replace(/\/$/, ''), siteInfo.seo.siteUrl).href} />
+    <link rel="canonical" href={new URL(Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, ''), siteInfo.seo.siteUrl).href} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96.png" sizes="96x96" />

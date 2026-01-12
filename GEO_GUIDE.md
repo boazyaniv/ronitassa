@@ -38,6 +38,7 @@ Allow: /
 * **`LocalBusiness` Schema:** Hardcode this into your main layout. Include exact coordinates, opening hours, and "ButcherShop" as the specific type.
 * **`Product` Schema:** Wrap your "Tomahawk," "Kebab," and "Entrecote" pages in Product schema so the AI knows you sell *items*, not just talk about them.
 * **`FAQ` Schema:** AIs love Q&A format. Add structured data for questions like "Do you deliver to Ramat Chen?"
+* **URL Structure:** Enforce **no trailing slashes** to prevent redirect loops. Use `trailingSlash: 'never'` in configuration and 301 redirects (e.g., via `netlify.toml`) to normalize URLs.
 
 
 
