@@ -19,13 +19,33 @@ const pageDescription = "הסיפור של רוני טסה - מהדור לדור
   <section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
       <div class="absolute inset-0 bg-black/60 z-10"></div>
-      <iframe 
-        src="https://www.youtube.com/embed/AFndJJ8K23Q?autoplay=1&mute=1&controls=0&loop=1&playlist=AFndJJ8K23Q&showinfo=0&rel=0&modestbranding=1&playsinline=1" 
-        class="w-full h-[150%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none object-cover"
-        style="min-width: 177.77vh;"
-        allow="autoplay; encrypted-media" 
-        allowfullscreen
-      ></iframe>
+      <video
+        id="hero-video"
+        class="w-full h-full absolute inset-0 object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="/src/assets/images/about/roni-and-wife.jpg"
+      >
+        <source src="/src/assets/videos/Steak_Sizzling_On_Grill_Video_640.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      
+      <!-- Mute Toggle Button -->
+      <button 
+        id="mute-toggle" 
+        class="absolute bottom-8 right-8 z-30 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 group"
+        aria-label="Toggle Mute"
+      >
+        <svg id="unmute-icon" class="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+        </svg>
+        <svg id="mute-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+        </svg>
+      </button>
     </div>
     
     <div class="relative z-20 container text-center">
@@ -155,6 +175,41 @@ const pageDescription = "הסיפור של רוני טסה - מהדור לדור
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const video = document.getElementById('hero-video') as HTMLVideoElement;
+  const muteBtn = document.getElementById('mute-toggle');
+  const muteIcon = document.getElementById('mute-icon');
+  const unmuteIcon = document.getElementById('unmute-icon');
+
+  if (video && muteBtn) {
+    // Background videos MUST start muted to autoplay unblocked in most browsers.
+    // Toggling to unmuted after a user interaction (the click) is the reliable way.
+    video.muted = true;
+
+    const updateIcons = () => {
+      if (video.muted) {
+        muteIcon?.classList.remove('hidden');
+        unmuteIcon?.classList.add('hidden');
+      } else {
+        muteIcon?.classList.add('hidden');
+        unmuteIcon?.classList.remove('hidden');
+      }
+    };
+
+    // Toggle mute on click
+    muteBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      updateIcons();
+    });
+
+    // Initialize icons based on current state
+    updateIcons();
+    
+    // Sync icons if the browser or system changes volume/mute state
+    video.addEventListener('volumechange', updateIcons);
+  }
+</script>
 
 <style>
   .prose {
